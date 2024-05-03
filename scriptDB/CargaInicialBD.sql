@@ -1,5 +1,5 @@
 -- Me posiciono en la base de datos
-USE DB207DWESProyectoTema5;
+USE DB207DWESAplicacionFinalBorja;
 
 -- Inserto los datos iniciales en la tabla T02_Departamento
 INSERT INTO T02_Departamento (T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio, T02_FechaBajaDepartamento) VALUES

@@ -1,13 +1,13 @@
 --Eliminar base de datos en caso de que exista
-DROP DATABASE IF EXISTS DB207DWESProyectoTema5;
+DROP DATABASE IF EXISTS DB207DWESAplicacionFinalBorja;
 
-DROP USER IF EXISTS 'user207DWESProyectoTema5'@'%';
+DROP USER IF EXISTS 'user207DWESAplicacionFinal'@'%';
 
 --Crear la base de datos
-CREATE DATABASE DB207DWESProyectoTema5;
+CREATE DATABASE DB207DWESAplicacionFinalBorja;
 
 --Utilizar la base de datos recién creada
-USE DB207DWESProyectoTema5;
+USE DB207DWESAplicacionFinalBorja;
 
 --Crear la tabla T01_Usuario
 CREATE TABLE T01_Usuario (
@@ -30,6 +30,6 @@ CREATE TABLE T02_Departamento (
 )ENGINE=INNODB;
 
 --Creación del usuario de la base de datos
-CREATE USER 'user207DWESProyectoTema5'@'%' IDENTIFIED BY 'paso';
+CREATE USER 'user207DWESAplicacionFinal'@'%' IDENTIFIED BY 'paso';
 --Otorgar permisos al usuario para acceder a la base de datos
-GRANT ALL PRIVILEGES ON DB207DWESProyectoTema5.* TO 'user207DWESProyectoTema5'@'%';
+GRANT ALL PRIVILEGES ON DB207DWESAplicacionFinalBorja.* TO 'user207DWESAplicacionFinal'@'%';

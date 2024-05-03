@@ -36,7 +36,7 @@ if (isset($_REQUEST['mto_departamentos'])) {
     exit();
 }
 
-// Ir a Wip
+// Ir a Mi Cuenta
 if (isset($_REQUEST['mi_cuenta'])) {
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'wip';
@@ -48,6 +48,14 @@ if (isset($_REQUEST['mi_cuenta'])) {
 if (isset($_REQUEST['error'])) {
     $consulta = "SELECT * FROM T03_Administracion";
     DBPDO::ejecutaConsulta($consulta);
+    exit();
+}
+
+// Ir a Rest
+if (isset($_REQUEST['rest'])) {
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'rest';
+    header('Location: indexAplicacionFinal.php');
     exit();
 }
 

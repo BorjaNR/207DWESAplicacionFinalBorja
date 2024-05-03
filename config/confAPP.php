@@ -15,12 +15,22 @@ require_once 'model/UsuarioPDO.php';
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
     'login' => 'controller/cLogin.php',
-    'inicioPrivado' => 'controller/cInicioPrivado.php'
+    'inicioPrivado' => 'controller/cInicioPrivado.php',
+    'detalle' => 'controller/cDetalle.php',
+    'wip' => 'controller/cWIP.php',
+    'error' => 'controller/cError.php',
+    'registro' => 'controller/cRegistro.php',
+    'rest' => 'controller/cREST.php'
 ];
 
 $view = [
     'layout' => 'view/Layout.php',
     'inicioPublico' => 'view/vInicioPublico.php',
     'login' => 'view/vLogin.php',
-    'inicioPrivado' => 'view/vInicioPrivado.php'
+    'inicioPrivado' => 'view/vInicioPrivado.php',
+    'detalle' => 'view/vDetalle.php',
+    'wip' => 'view/vWIP.php',
+    'error' => 'view/vError.php',
+    'registro' => 'view/vRegistro.php',
+    'rest' => 'view/vREST.php'
 ];
