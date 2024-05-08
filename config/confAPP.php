@@ -11,6 +11,10 @@ require_once 'model/ErrorApp.php';
 require_once 'model/Usuario.php';
 require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
+require_once 'model/Departamento.php';
+require_once 'model/DepartamentoPDO.php';
+require_once 'model/Vehiculo.php';
+require_once 'model/VehiculoPDO.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
@@ -20,7 +24,8 @@ $controller = [
     'wip' => 'controller/cWIP.php',
     'error' => 'controller/cError.php',
     'registro' => 'controller/cRegistro.php',
-    'rest' => 'controller/cREST.php'
+    'rest' => 'controller/cREST.php',
+    'mto_departamento' => 'controller/cMtoDepartamento.php'
 ];
 
 $view = [
@@ -32,5 +37,6 @@ $view = [
     'wip' => 'view/vWIP.php',
     'error' => 'view/vError.php',
     'registro' => 'view/vRegistro.php',
-    'rest' => 'view/vREST.php'
+    'rest' => 'view/vREST.php',
+    'mto_departamento' => 'view/vMtoDepartamento.php'
 ];

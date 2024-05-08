@@ -31,7 +31,7 @@ if (isset($_REQUEST['detalle'])) {
 // Ir a Wip
 if (isset($_REQUEST['mto_departamentos'])) {
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
-    $_SESSION['paginaEnCurso'] = 'wip';
+    $_SESSION['paginaEnCurso'] = 'mto_departamento';
     header('Location: indexAplicacionFinal.php');
     exit();
 }

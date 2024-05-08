@@ -29,6 +29,16 @@ CREATE TABLE T02_Departamento (
     T02_FechaBajaDepartamento DATETIME
 )ENGINE=INNODB;
 
+CREATE TABLE IF NOT EXISTS T10_Vehiculo (
+    T10_Matricula VARCHAR(7) NOT NULL,
+    T10_Modelo VARCHAR(50) NOT NULL,
+    T10_FechaCompra DATETIME NOT NULL,
+    T10_NumPuertas INT NOT NULL,
+    T10_Color VARCHAR(50),
+    T10_Valor DECIMAL(18,2),
+    T10_FechaBaja DATETIME DEFAULT NULL,
+    PRIMARY KEY (T10_Matricula));
+
 --Creación del usuario de la base de datos
 CREATE USER 'user207DWESAplicacionFinal'@'%' IDENTIFIED BY 'paso';
 --Otorgar permisos al usuario para acceder a la base de datos
