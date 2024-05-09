@@ -15,6 +15,7 @@ require_once 'model/Departamento.php';
 require_once 'model/DepartamentoPDO.php';
 require_once 'model/Vehiculo.php';
 require_once 'model/VehiculoPDO.php';
+require_once 'model/REST.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
