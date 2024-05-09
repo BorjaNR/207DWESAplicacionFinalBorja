@@ -1,6 +1,6 @@
-DirectoryIndex indexLoginLogoffTema6.php
-ErrorDocument 404 /207DWESLoginLogoffTema6/errors/404.html
-ErrorDocument 403 /207DWESLoginLogoffTema6/errors/403.html
+DirectoryIndex indexAplicacionFinal.php
+ErrorDocument 404 /207DWESAplicacionFinalBorja/errors/404.html
+ErrorDocument 403 /207DWESAplicacionFinalBorja/errors/403.html
 Redirect 301 /google https://www.google.es
 #RewriteEngine On
 #RewriteCond %{SERVER_PORT} 80
