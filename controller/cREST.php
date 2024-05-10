@@ -18,7 +18,7 @@ if (isset($_REQUEST['volver'])) {
  */
 $aVistaRest = [
     'nasa' => [],
-    'AEMET' =>[],
+    'AEMET' => '',
 ];
 
 //Si  hay algo en el campo fecha

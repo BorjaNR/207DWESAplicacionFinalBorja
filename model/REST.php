@@ -33,7 +33,9 @@ class REST{
             $archivoApi = json_decode($resultado, true);
             
             if (isset($archivoApi)){
-                $aResultadoArchivoAEMET['provincia'] = $archivoApi['datos'];
+                return $aResultadoArchivoAEMET['provincia'] = $archivoApi['datos'];
+            }else{
+                return null;
             }
         } catch (Exception $excepcion) {
             // devolvemos el mensaje de error
