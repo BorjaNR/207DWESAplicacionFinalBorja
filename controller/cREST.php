@@ -13,30 +13,27 @@ if (isset($_REQUEST['volver'])) {
     exit();
 }
 
-//Inicializamos la variable text a null
-$text = null;
-
 /**
  * Creamos un array para almacenar las respuestas de la api
  */
 $aVistaRest = [
     'nasa' => [],
+    'AEMET' =>[],
 ];
 
 //Si  hay algo en el campo fecha
-if (isset($_REQUEST['fecha'])) {
+if (isset($_REQUEST['fechaNasa'])) {
 
     //Guardamos la fecha en la sesion
-    $_SESSION['nasaFecha'] = $_REQUEST['fecha'];
+    $_SESSION['nasaFechaEnCurso'] = $_REQUEST['fechaNasa'];
 }
 
-//Si hay algo en el campo texto
-if (isset($_REQUEST['texto'])) {
-
-    //Guardamos la fecha en la sesion
-    $_SESSION['textoTraducido'] = $_REQUEST['texto'];
+//Guardamos en sesion la provincia
+if (isset($_REQUEST['provincia'])) {
+    $_SESSION['provinciaSeleccionada'] = $_REQUEST['provincia'];
 }
 
-$aVistaRest['nasa'] = REST::apiNasa(isset( $_SESSION['nasaFecha']) ?  $_SESSION['nasaFecha'] : date('Y-m-d'));
+$aVistaRest['nasa'] = REST::apiNasa(isset( $_SESSION['nasaFechaEnCurso']) ?  $_SESSION['nasaFechaEnCurso'] : date('Y-m-d'));
+$aVistaRest['AEMET'] = REST::apiAemet(isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '01');
 
 require_once $view['layout'];
