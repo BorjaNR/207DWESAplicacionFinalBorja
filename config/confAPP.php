@@ -26,7 +26,8 @@ $controller = [
     'error' => 'controller/cError.php',
     'registro' => 'controller/cRegistro.php',
     'rest' => 'controller/cREST.php',
-    'mto_departamento' => 'controller/cMtoDepartamento.php'
+    'mto_departamento' => 'controller/cMtoDepartamento.php',
+    'editarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
 ];
 
 $view = [
@@ -39,5 +40,6 @@ $view = [
     'error' => 'view/vError.php',
     'registro' => 'view/vRegistro.php',
     'rest' => 'view/vREST.php',
-    'mto_departamento' => 'view/vMtoDepartamento.php'
+    'mto_departamento' => 'view/vMtoDepartamento.php',
+    'editarDepartamento' => 'view/vConsultarModificarDepartamento.php'
 ];

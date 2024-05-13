@@ -51,4 +51,25 @@ class DepartamentoPDO {
             return false;
         }
     }
+    
+    /**
+     * Modifica los valores de un departamento
+     *
+     * @param string $codDepartamento Codigo del Departamento a editar
+     * @param string $descDepartamento Descripción del Departamento a editar
+     * @param float $volumenDeNegocio Volumen de Negocio del Departamento a editar
+     * 
+     * @return PDOStatment Devuelve el resultado de la coonsulta
+     */
+    public static function modificaDepartamento($codDepartamento, $descDepartamento, $volumenDeNegocio) {
+        // Consulta de busqueda según el valor del parametro introducido
+        $consulta = <<<CONSULTA
+            UPDATE T02_Departamento SET 
+            T02_DescDepartamento = '{$descDepartamento}',
+            T02_VolumenDeNegocio = {$volumenDeNegocio}
+            WHERE T02_CodDepartamento = '{$codDepartamento}';
+        CONSULTA;
+
+        return DBPDO::ejecutaConsulta($consulta); // Ejecutamos y devolvemos la consulta
+    }
 }

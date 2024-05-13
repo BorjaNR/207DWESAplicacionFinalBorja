@@ -15,7 +15,7 @@
             <tr>
                 <td colspan="3"><label class="form-label">Descripcion de Departamento</label></td>
                 <td colspan="3"><textarea class="form-control" rows="1" name="DescDepartamento"><?php echo (isset($_REQUEST['DescDepartamento']) ? $_REQUEST['DescDepartamento'] : ''); ?></textarea></td>
-                <td colspan="3"><?php echo (!empty($aErrores["DescDepartamento"]) ? '<span style="color: red;">' . $aErrores["DescDepartamento"] . '</span>' : ''); //Esto es para mostrar el mensaje de error en color rojo     ?></td>
+                <td colspan="3"><?php echo (!empty($aErrores["DescDepartamento"]) ? '<span style="color: red;">' . $aErrores["DescDepartamento"] . '</span>' : ''); //Esto es para mostrar el mensaje de error en color rojo      ?></td>
                 <td colspan="3"><input class="btn btn-primary" rows="1" name="enviar" type="submit" value=Buscar></td>
             </tr>
         </table>
@@ -29,6 +29,7 @@
             <th>Fecha de Creacion</th>
             <th>Volumen de Negocio</th>
             <th>Fecha de Baja</th>
+            <th>Acciones</th>
         </tr>
         <?php
         //Mostramos los departamentos en una tabla
@@ -39,6 +40,13 @@
             echo ("<td>" . $aDepartamento['fechaCreacionDep'] . "</td>");
             echo ("<td>" . $aDepartamento['volumenDeNegocio'] . "</td>");
             echo ("<td>" . $aDepartamento['fechaBajaDep'] . "</td>");
+            // Formulario para editar
+            echo ("<td>");
+                echo ("<form method='post'>");
+                echo ("<input type='hidden' name='ConsultarModificarDepartamento' value='" . $aDepartamento['codDepartamento'] . "'>");
+                echo ("<button type='submit'><img src='webroot/images/editar.png' alt='EDIT' width='15' height='10'></button>");
+                echo ("</form>");
+            echo ("</td>");
             echo "</tr>";
         }
         ?>

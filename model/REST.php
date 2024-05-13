@@ -8,7 +8,7 @@
 
 class REST{
     const apikeyNASA = 'GnVVT40hqgzJrrRtsv5y2iy15w2fDFNqM8CLOK7s';
-    const apikeyAEMET = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib3JqYW5yZGF3MUBnbWFpbC5jb20iLCJqdGkiOiJkNzM4ZTY5YS04NGU4LTQ4ZmEtYTcxNC01M2FjYjI1MWRhOWIiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcxNTI5MzA1OCwidXNlcklkIjoiZDczOGU2OWEtODRlOC00OGZhLWE3MTQtNTNhY2IyNTFkYTliIiwicm9sZSI6IiJ9.MxWlsfb1Ttm07i52Vj62NTJCfGEMmmYQoHizqpH-k38';
+    const apikeyAEMET = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJib3JqYW5yZGF3MUBnbWFpbC5jb20iLCJqdGkiOiIzMTAzYzFhYS0xMGE0LTRkYmMtOWIzZC1kNjAzOGM5YzhmNjAiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTcxNTMyODUwOSwidXNlcklkIjoiMzEwM2MxYWEtMTBhNC00ZGJjLTliM2QtZDYwMzhjOWM4ZjYwIiwicm9sZSI6IiJ9.JrSGixzGg5PlLkx46Cp7h_u5Hh7neMONdqGm50n2T84';
 
     public static function apiNasa($fecha)
     {
@@ -33,7 +33,8 @@ class REST{
             $archivoApi = json_decode($resultado, true);
             
             if (isset($archivoApi)){
-                return $aResultadoArchivoAEMET['provincia'] = $archivoApi['datos'];
+                $aResultadoArchivoAEMET['provincia'] = $archivoApi['datos'];
+                return $aResultadoArchivoAEMET;
             }else{
                 return null;
             }

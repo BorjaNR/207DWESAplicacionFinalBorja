@@ -16,16 +16,17 @@
                 <legend>
                     <h2>Foto del dia de la nasa</h2>
                 </legend>
-                <input type="date" name="fechaNasa" value="<?php echo isset($_SESSION['nasaFechaEnCurso']) ? $_SESSION['nasaFechaEnCurso'] : date("Y-m-d") ?>" max=<?php $hoy = date("Y-m-d");
-echo $hoy;
-?> min='1999-01-01'>
+                <input type="date" name="fechaNasa" value="<?php echo isset($_SESSION['nasaFechaEnCurso']) ? $_SESSION['nasaFechaEnCurso'] : date("Y-m-d") ?>" max=<?php
+                $hoy = date("Y-m-d");
+                echo $hoy;
+                ?> min='1999-01-01'>
                 <input type="submit" value="Aceptar" name="nasa">
                 <p><b>Titulo de la Imagen:</b> <?php echo isset($aVistaRest['nasa']['title']) ? $aVistaRest['nasa']['title'] : 'Titulo no disponible'; ?></p>
                 <?php if (isset($aVistaRest['nasa']['hdurl'])) { ?>
                     <img src="<?php echo $aVistaRest['nasa']['hdurl']; ?>" width="300px" height="300px">
                 <?php } else { ?>
                     <p>Imagen no disponible</p>
-<?php } ?>
+                <?php } ?>
                 <hr>
                 <p style="margin-top: 20px;"><span style="font-weight: bold;">URL</span>: https://api.nasa.gov/planetary/apod?api_key=rAIYGgvhzNQg1Lxtpe90waf8orEmQPTrZrfdra14&date=$fecha", false, $context</p>
                 <p><span style="font-weight: bold;">Parametros:</span> Fecha</p>
@@ -40,10 +41,11 @@ echo $hoy;
                     <h2>Prediccion del dia</h2>
                 </legend>
                 <?php
-                    // Definir el valor $provinciaSeleccionada
-                    $provinciaSeleccionada = isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '01';
+                // Definir el valor $provinciaSeleccionada
+                $provinciaSeleccionada = isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '49';
                 ?>
                 <select name="provincia" id="provincia">
+                    <option value="49" <?php echo ($provinciaSeleccionada == '49') ? 'selected' : ''; ?>>Zamora</option>
                     <option value="01" <?php echo ($provinciaSeleccionada == '01') ? 'selected' : ''; ?>>Araba/Álava</option>
                     <option value="02" <?php echo ($provinciaSeleccionada == '02') ? 'selected' : ''; ?>>Albacete</option>
                     <option value="03" <?php echo ($provinciaSeleccionada == '03') ? 'selected' : ''; ?>>Alacant/Alicante</option>
@@ -91,17 +93,30 @@ echo $hoy;
                     <option value="45" <?php echo ($provinciaSeleccionada == '45') ? 'selected' : ''; ?>>Toledo</option>
                     <option value="46" <?php echo ($provinciaSeleccionada == '46') ? 'selected' : ''; ?>>València/Valencia</option>
                     <option value="47" <?php echo ($provinciaSeleccionada == '47') ? 'selected' : ''; ?>>Valladolid</option>
-                    <option value="49" <?php echo ($provinciaSeleccionada == '49') ? 'selected' : ''; ?>>Zamora</option>
                     <option value="50" <?php echo ($provinciaSeleccionada == '50') ? 'selected' : ''; ?>>Zaragoza</option>
                 </select>
                 <button class="volver" type="submit" name="prevision">Obtener Previsión</button>
                 <hr>
                 <?php
-                    // Muestra con formato los datos
-                    $previsionUtf8 = utf8_encode(file_get_contents($aVistaRest['AEMET']['datos']));
-                    if (isset($previsionUtf8)) {
-                        echo "<pre>{$previsionUtf8}</pre>";
+                // Muestra con formato los datos
+                if (is_array($aVistaRest['AEMET'])) {
+                    foreach ($aVistaRest['AEMET'] as $archivo) {
+                        $previsionUtf8 = utf8_encode(file_get_contents($archivo));
+                        if ($previsionUtf8 !== false) {
+                            echo "<pre>{$previsionUtf8}</pre>";
+                        } else {
+                            echo "Error al leer el archivo: $archivo<br>";
+                        }
                     }
+                } else {
+                    // Si $aVistaRest['AEMET'] no es un array, suponemos que es una cadena de texto
+                    $previsionUtf8 = utf8_encode(file_get_contents($aVistaRest['AEMET']));
+                    if ($previsionUtf8 !== false) {
+                        echo "<pre>{$previsionUtf8}</pre>";
+                    } else {
+                        echo "Error al leer el archivo: {$aVistaRest['AEMET']}<br>";
+                    }
+                }
                 ?>
             </fieldset>
         </form>
