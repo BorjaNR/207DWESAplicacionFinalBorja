@@ -13,9 +13,9 @@ require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/Departamento.php';
 require_once 'model/DepartamentoPDO.php';
-require_once 'model/Vehiculo.php';
-require_once 'model/VehiculoPDO.php';
 require_once 'model/REST.php';
+require_once 'model/FotoNasa.php';
+require_once 'model/PrediccionAemet.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',

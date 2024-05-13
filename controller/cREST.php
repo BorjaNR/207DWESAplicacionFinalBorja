@@ -9,6 +9,8 @@
 if (isset($_REQUEST['volver'])) {
     // Redirige a la página de inicio
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['nasaFechaEnCurso'] = date("Y-m-d");
+    $_SESSION['AEMETProvinciaEnCurso'] = 49;
     header('Location: indexAplicacionFinal.php'); 
     exit();
 }
@@ -21,6 +23,8 @@ $aVistaRest = [
     'AEMET' => '',
 ];
 
+$_SESSION['nasaFechaEnCurso'] = date("Y-m-d");
+
 //Si  hay algo en el campo fecha
 if (isset($_REQUEST['fechaNasa'])) {
 
@@ -28,12 +32,14 @@ if (isset($_REQUEST['fechaNasa'])) {
     $_SESSION['nasaFechaEnCurso'] = $_REQUEST['fechaNasa'];
 }
 
+$oFotoNasaEnCurso = REST::apiNasa($_SESSION['nasaFechaEnCurso']);
+$aVistaRest['nasa']['titulo'] = $oFotoNasaEnCurso->getTitulo();
+$aVistaRest['nasa']['foto'] = $oFotoNasaEnCurso->getFoto();
+
 //Guardamos en sesion la provincia
 if (isset($_REQUEST['provincia'])) {
-    $_SESSION['provinciaSeleccionada'] = $_REQUEST['provincia'];
+    $_SESSION['AEMETProvinciaEnCurso'] = $_REQUEST['provincia'];
 }
-
-$aVistaRest['nasa'] = REST::apiNasa(isset( $_SESSION['nasaFechaEnCurso']) ?  $_SESSION['nasaFechaEnCurso'] : date('Y-m-d'));
-$aVistaRest['AEMET'] = REST::apiAemet(isset($_SESSION['provinciaSeleccionada']) ? $_SESSION['provinciaSeleccionada'] : '01');
+$aVistaRest['AEMET'] = REST::apiAemet(isset($_SESSION['AEMETProvinciaEnCurso']) ? $_SESSION['AEMETProvinciaEnCurso'] : '49');
 
 require_once $view['layout'];

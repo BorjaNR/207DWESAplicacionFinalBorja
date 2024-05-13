@@ -17,7 +17,7 @@ if (isset($_REQUEST['volver'])) {
 // Estructura del botón editarDepartamento, si el usuario pulsa el botón del icono de un 'lapiz'
 if (isset($_REQUEST['ConsultarModificarDepartamento'])) {
     $_SESSION['codDepartamentoActual'] = $_REQUEST['ConsultarModificarDepartamento']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
-    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
     exit;

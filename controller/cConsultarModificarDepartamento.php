@@ -57,5 +57,8 @@ if (isset($_REQUEST['enviar'])) {
 if ($entradaOK) {
     //modificamos el departamento con el metodo modificar
     DepartamentoPDO::modificaDepartamento($_SESSION['codDepartamentoActual'], $_REQUEST['T02_DescDepartamento'], $_REQUEST['T02_VolumenDeNegocio']);
+    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaAnterior'] = '';
+    header('Location: indexAplicacionFinal.php'); 
 }
 require_once $view['layout'];

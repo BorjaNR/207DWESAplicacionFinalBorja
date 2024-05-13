@@ -17,7 +17,15 @@ class REST{
             $resultado = file_get_contents("https://api.nasa.gov/planetary/apod?api_key=" . self::apikeyNASA . "&date=$fecha");
 
             // Devolvemos el array devuelto por json_decode
-            return json_decode($resultado, true);
+            $archivoApi = json_decode($resultado, true);
+            
+            //Compruebo que existe o no esta vacio el archivo y si no lo esta devuelvo un objeto y si no null
+            if (isset($archivoApi)){
+                $fotoNasa = new FotoNasa($archivoApi['title'], $archivoApi['hdurl']);
+                return $fotoNasa;
+            }else{
+                return null;
+            }
         } catch (Exception $excepcion) {
             // devolvemos el mensaje de error
             return $excepcion->getMessage();
