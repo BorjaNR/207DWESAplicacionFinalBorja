@@ -7,6 +7,18 @@
  */
 
 class PrediccionAemet{
+    private $prediccion;
     
+    public function __construct($prediccion) {
+        $this->prediccion = $prediccion;
+    }
+    
+    public function getPrediccion() {
+        return $this->prediccion;
+    }
+
+    public function setPrediccion($prediccion): void {
+        $this->prediccion = $prediccion;
+    }
 }
 

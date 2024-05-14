@@ -36,10 +36,13 @@ $oFotoNasaEnCurso = REST::apiNasa($_SESSION['nasaFechaEnCurso']);
 $aVistaRest['nasa']['titulo'] = $oFotoNasaEnCurso->getTitulo();
 $aVistaRest['nasa']['foto'] = $oFotoNasaEnCurso->getFoto();
 
+$_SESSION['AEMETProvinciaEnCurso'] = '49';
+
 //Guardamos en sesion la provincia
 if (isset($_REQUEST['provincia'])) {
     $_SESSION['AEMETProvinciaEnCurso'] = $_REQUEST['provincia'];
 }
-$aVistaRest['AEMET'] = REST::apiAemet(isset($_SESSION['AEMETProvinciaEnCurso']) ? $_SESSION['AEMETProvinciaEnCurso'] : '49');
+$oProvinciaEnCurso = REST::apiAemet($_SESSION['AEMETProvinciaEnCurso']);
+$aVistaRest['AEMET'] = $oProvinciaEnCurso->getPrediccion();
 
 require_once $view['layout'];

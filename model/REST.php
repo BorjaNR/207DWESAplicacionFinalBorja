@@ -41,8 +41,8 @@ class REST{
             $archivoApi = json_decode($resultado, true);
             
             if (isset($archivoApi)){
-                $aResultadoArchivoAEMET['provincia'] = $archivoApi['datos'];
-                return $aResultadoArchivoAEMET;
+                $prediccionAemet = new PrediccionAemet($archivoApi['datos']);
+                return $prediccionAemet;
             }else{
                 return null;
             }
