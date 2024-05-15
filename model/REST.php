@@ -27,8 +27,11 @@ class REST{
                 return null;
             }
         } catch (Exception $excepcion) {
-            // devolvemos el mensaje de error
-            return $excepcion->getMessage();
+            $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+            $_SESSION['paginaEnCurso'] = 'error';
+            $_SESSION['error'] = new ErrorApp($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());
+            header('Location:indexAplicacionFinal.php');
+            exit;
         }
     }
 
@@ -47,8 +50,11 @@ class REST{
                 return null;
             }
         } catch (Exception $excepcion) {
-            // devolvemos el mensaje de error
-            return $excepcion->getMessage();
+            $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+            $_SESSION['paginaEnCurso'] = 'error';
+            $_SESSION['error'] = new ErrorApp($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());
+            header('Location:indexAplicacionFinal.php');
+            exit;
         }
     }
 }

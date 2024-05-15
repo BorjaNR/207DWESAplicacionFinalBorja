@@ -100,13 +100,11 @@
                 <?php
                 // Muestra con formato los datos
                 if (is_array($aVistaRest['AEMET'])) {
-                    foreach ($aVistaRest['AEMET'] as $archivo) {
-                        $previsionUtf8 = utf8_encode(file_get_contents($archivo));
-                        if ($previsionUtf8 !== false) {
-                            echo "<pre>{$previsionUtf8}</pre>";
-                        } else {
-                            echo "Error al leer el archivo: $archivo<br>";
-                        }
+                    $previsionUtf8 = utf8_encode(file_get_contents());
+                    if ($previsionUtf8 !== false) {
+                        echo "<pre>{$previsionUtf8}</pre>";
+                    } else {
+                        echo "Error al leer el archivo: <br>";
                     }
                 } else {
                     // Si $aVistaRest['AEMET'] no es un array, suponemos que es una cadena de texto

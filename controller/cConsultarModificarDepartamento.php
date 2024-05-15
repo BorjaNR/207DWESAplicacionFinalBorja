@@ -25,15 +25,7 @@ $aErrores = [
  * Recuperamos el código del departamento seleccionado anteriormente por medio de una variable de sesión
  * Y usando el metodo 'buscaDepartamentoPorCod' de la clase 'DepartamentoPDO' recuperamos el objeto completo
  */
-$oDepartamentoSeleccionado = DepartamentoPDO::buscaDepartamentosPorDesc($_SESSION['codDepartamentoActual']);
-
-// Almaceno la información del departamento actual en las siguiente variables, para mostrarlas en el formulario
-if ($oDepartamentoSeleccionado) {
-    $codDepartamentoAEditar = $oDepartamentoSeleccionado->get_CodDepartamento();
-    $descripcionDepartamentoAEditar = $oDepartamentoSeleccionado->get_DescDepartamento();
-    $fechaCreacionDepartamentoAEditar = $oDepartamentoSeleccionado->get_FechaCreacionDepartamento();
-    $volumenNegocioAEditar = $oDepartamentoSeleccionado->get_VolumenDeNegocio();
-}
+$oDepartamentoSeleccionado = DepartamentoPDO::buscaDepartamentoPorCod($_SESSION['codDepartamentoActual']);
 
 //Cargar valores por defecto en los campos del formulario
 //Para cada campo del formulario: Validar entrada y actuar en consecuencia
@@ -61,4 +53,15 @@ if ($entradaOK) {
     $_SESSION['paginaAnterior'] = '';
     header('Location: indexAplicacionFinal.php'); 
 }
+
+// Almaceno la información del departamento actual en este array, para mostrarlas en el formulario
+if ($oDepartamentoSeleccionado) {
+    $avConsultarModificarDepartamento = [
+        'codDepartamento' => $oDepartamentoSeleccionado->getCodDepartamento(),
+        'descDepartamento' => $oDepartamentoSeleccionado->getDescDepartamento(),
+        'fechaCreacion' => $oDepartamentoSeleccionado->getFechaCreacionDepartamento(),
+        'volumen' => $oDepartamentoSeleccionado->getVolumenDeNegocio()
+    ];
+}
+
 require_once $view['layout'];

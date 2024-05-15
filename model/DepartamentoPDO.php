@@ -52,6 +52,40 @@ class DepartamentoPDO {
         }
     }
     
+     /**
+     * Metodo que nos permite buscar un departamento por el código 
+     * 
+     * @param string $codDepartamento El código del Departamento
+     * 
+     * @return object Departamento 
+     */
+    public static function buscaDepartamentoPorCod($codDepartamento) {
+        //CONSULTA SQL - SELECT
+        $consulta = <<<CONSULTA
+            SELECT * FROM T02_Departamento 
+            WHERE T02_CodDepartamento = '{$codDepartamento}';
+        CONSULTA;
+
+        $resultado = DBPDO::ejecutaConsulta($consulta); // Ejecuto la consulta
+
+        if (!is_null($resultado)) { // Si la consulta es distinta de null
+            $oDepartamento = $resultado->fetchObject(); // Guardo en la variable el resultado de la consulta en forma de objeto
+            
+            if ($oDepartamento) { // Instancio un nuevo objeto Departamento con todos sus datos
+                return new Departamento(// Y lo devuelvo
+                        $oDepartamento->T02_CodDepartamento,
+                        $oDepartamento->T02_DescDepartamento,
+                        $oDepartamento->T02_FechaCreacionDepartamento,
+                        $oDepartamento->T02_VolumenDeNegocio,
+                        $oDepartamento->T02_FechaBajaDepartamento);
+            } else {
+                return $oDepartamento; // Devuelvo el objeto Departamento
+            }
+        } else {
+            return false; // En caso de fallar devuelvo false
+        }
+    }
+    
     /**
      * Modifica los valores de un departamento
      *
