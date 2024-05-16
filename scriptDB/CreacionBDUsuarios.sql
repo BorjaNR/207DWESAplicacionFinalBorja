@@ -25,7 +25,7 @@ CREATE TABLE T02_Departamento (
     T02_CodDepartamento CHAR(3) PRIMARY KEY,
     T02_DescDepartamento VARCHAR(255),
     T02_FechaCreacionDepartamento DATETIME DEFAULT CURRENT_TIMESTAMP,
-    T02_VolumenDeNegocio FLOAT,
+    T02_VolumenDeNegocio DOUBLE,
     T02_FechaBajaDepartamento DATETIME
 )ENGINE=INNODB;
 

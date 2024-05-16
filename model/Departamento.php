@@ -1,6 +1,17 @@
 <?php
-
 /**
+ * Class Departamento
+ *
+ * Fichero que contiene la clase Departamento, que contiene un contructor de Departamento y las funciiones get y set de cada atributo de la clase
+ * PHP version 8.1
+ * 
+ */
+
+/** 
+ * Clase de Departamento
+ * 
+ * Clase de Departamento
+ * 
  * @author Borja Nuñez Refoyo
  * @version 2.0 
  * @since 06/05/2024
@@ -27,7 +38,7 @@ class Departamento {
 
     /**
      * Volumen de Negocio
-     * @var float
+     * @var double
      */
     private $volumenDeNegocio;
 
@@ -40,10 +51,12 @@ class Departamento {
     /**
      * Contructor de la clase Departamento
      * 
+     * Contructor de la clase Departamento
+     * 
      * @param string $codDepartamento
      * @param string $descDepartamento
      * @param DateTime $fechaCreacionDepartamento
-     * @param float $volumenDeNegocio
+     * @param double $volumenDeNegocio
      * @param DateTime $fechaBajaDepartamento
      */
     public function __construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento = NULL) {
@@ -55,6 +68,8 @@ class Departamento {
     }
 
     /**
+     * Funcion getCodDepartamento
+     * 
      * Obtiene el código de Departamento.
      *
      * @return string El código de Departamento.
@@ -64,6 +79,8 @@ class Departamento {
     }
 
     /**
+     * Funcion getDescDepartamento
+     * 
      * Obtiene la descripción de Departamento.
      *
      * @return string La descripción de Departamento.
@@ -73,6 +90,8 @@ class Departamento {
     }
 
     /**
+     * Funcion getFechaCreacionDepartamento
+     * 
      * Obtiene la fecha de creación de Departamento.
      *
      * @return DateTime La fecha de creación de Departamento.
@@ -82,6 +101,8 @@ class Departamento {
     }
 
     /**
+     * Funcion getVolumenDeNegocio
+     * 
      * Obtiene el Volumen de Negocio de Departamento.
      *
      * @return float El volumne de negocio.
@@ -91,6 +112,8 @@ class Departamento {
     }
 
     /**
+     * Funcion getFechaBajaDepartamento
+     * 
      * Obtiene la fecha de baja de Departamento.
      *
      * @return DateTime La fecha de baja de Departamento.
@@ -100,6 +123,8 @@ class Departamento {
     }
 
     /**
+     * Funcion setCodDepartamento
+     * 
      * Establece el código de Departamento
      *
      * @param string $codDepartamento El nuevo código del Departamento.
@@ -109,6 +134,8 @@ class Departamento {
     }
 
     /**
+     * Funcion setDescDepartamento
+     * 
      * Establece la descripción de Departamento
      *
      * @param string $descDepartamento La nueva descripción del Departamento.
@@ -118,6 +145,8 @@ class Departamento {
     }
 
     /**
+     * Funcion setFechaCreacionDepartamento
+     * 
      * Establece la fecha de creación de Departamento
      *
      * @param DateTime $fechaCreacionDepartamento La nueva fecha de creación del Departamento.
@@ -127,15 +156,19 @@ class Departamento {
     }
 
     /**
+     * Funcion setVolumenDeNegocio
+     * 
      * Establece el volumen de negocio del Departamento
      *
-     * @param float $volumenDeNegocio El nuevo volumen de negocio del Departamento.
+     * @param double $volumenDeNegocio El nuevo volumen de negocio del Departamento.
      */
     public function setVolumenDeNegocio($volumenDeNegocio) {
         $this->volumenDeNegocio = $volumenDeNegocio;
     }
 
     /**
+     * Funcion setFechaBajaDepartamento
+     * 
      * Establece la fecha de baja de Departamento
      *
      * @param DateTime $fechaBajaDepartamento La nueva fecha de baja del Departamento.

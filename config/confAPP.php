@@ -13,9 +13,9 @@ require_once 'model/UsuarioDB.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/Departamento.php';
 require_once 'model/DepartamentoPDO.php';
-require_once 'model/Vehiculo.php';
-require_once 'model/VehiculoPDO.php';
 require_once 'model/REST.php';
+require_once 'model/FotoNasa.php';
+require_once 'model/PrediccionAemet.php';
 
 $controller = [
     'inicioPublico' => 'controller/cInicioPublico.php',
@@ -26,7 +26,8 @@ $controller = [
     'error' => 'controller/cError.php',
     'registro' => 'controller/cRegistro.php',
     'rest' => 'controller/cREST.php',
-    'mto_departamento' => 'controller/cMtoDepartamento.php'
+    'mto_departamento' => 'controller/cMtoDepartamento.php',
+    'editarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
 ];
 
 $view = [
@@ -39,5 +40,6 @@ $view = [
     'error' => 'view/vError.php',
     'registro' => 'view/vRegistro.php',
     'rest' => 'view/vREST.php',
-    'mto_departamento' => 'view/vMtoDepartamento.php'
+    'mto_departamento' => 'view/vMtoDepartamento.php',
+    'editarDepartamento' => 'view/vConsultarModificarDepartamento.php'
 ];
