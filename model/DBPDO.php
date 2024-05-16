@@ -1,12 +1,35 @@
 <?php
-
 /**
+ * Class DBPDO
+ *
+ * Fichero que contiene la clase DBPDO, que contiene una funcion para ejecutar cualquier consulta
+ * PHP version 8.1
+ * 
+ */
+
+/** 
+ * Clase de ejecutar consulta
+ * 
+ * Clase de ejecutar consulta que contiene la funcion para ejecutar cualquier consulta sql
+ * 
  * @author Borja Nueñez Refoyo
  * @version 2.0
  * @since 03/05/2024
+ * 
  */
-class DBPDO implements DB {
 
+class DBPDO implements DB {
+    /**
+     * 
+     * Funcion ejecutaConsulta
+     * 
+     * Funcion que ejecuta cualquier consulta sql
+     * 
+     * @param string $sentenciaSQL Variable donde se almacena una consulta sql
+     * @param string $parametros Variable donde se almacenan los parametros de la consulta
+     * @return string Devuelve el resultado de la consulta si es correcta y si no el error
+     * 
+     */
     public static function ejecutaConsulta($sentenciaSQL, $parametros = null) {
         try {
             // Instanciamos un objeto PDO y establecemos la conexión

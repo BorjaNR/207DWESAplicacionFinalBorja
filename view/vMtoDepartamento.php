@@ -14,7 +14,7 @@
         <table class="table table-striped"> 
             <tr>
                 <td colspan="3"><label class="form-label">Descripcion de Departamento</label></td>
-                <td colspan="3"><textarea class="form-control" rows="1" name="DescDepartamento"><?php echo (isset($_REQUEST['DescDepartamento']) ? $_REQUEST['DescDepartamento'] : ''); ?></textarea></td>
+                <td colspan="3"><textarea class="form-control" rows="1" name="DescDepartamento"><?php echo isset($_SESSION['criterioBusquedaDepartamentos']['descDepartamento']) ? $_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] : "" ?></textarea></td>
                 <td colspan="3"><?php echo (!empty($aErrores["DescDepartamento"]) ? '<span style="color: red;">' . $aErrores["DescDepartamento"] . '</span>' : ''); //Esto es para mostrar el mensaje de error en color rojo      ?></td>
                 <td colspan="3"><input class="btn btn-primary" rows="1" name="enviar" type="submit" value=Buscar></td>
             </tr>
@@ -41,12 +41,15 @@
             echo ("<td>" . $aDepartamento['volumenDeNegocio'] . "</td>");
             echo ("<td>" . $aDepartamento['fechaBajaDep'] . "</td>");
             // Formulario para editar
-            echo ("<td>");
+            echo("<td>");
                 echo ("<form method='post'>");
                 echo ("<input type='hidden' name='ConsultarModificarDepartamento' value='" . $aDepartamento['codDepartamento'] . "'>");
-                echo ("<button type='submit'><img src='webroot/images/editar.png' alt='EDIT' width='15' height='10'></button>");
+                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/editar.png' alt='EDIT' width='15' height='10'></button>");
+            // Formulario para editar
+                echo ("<input type='hidden' name='borrar' value='" . $aDepartamento['codDepartamento'] . "'>");
+                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/borrar.png' alt='DELETE' width='15' height='10'></button>");
                 echo ("</form>");
-            echo ("</td>");
+            echo("</td>");
             echo "</tr>";
         }
         ?>

@@ -1,6 +1,15 @@
 <?php
-
 /**
+ * Class DepartamentoPDO
+ *
+ * Fichero que contiene la clase DepartamentoPDO, que contiene diversas funciones 
+ * PHP version 8.1
+ * 
+ */
+
+/** 
+ * Clase de Departamento
+ * 
  * @author Borja Nuñez Refoyo
  * @version 2.0 
  * @since 06/05/2024
@@ -91,7 +100,7 @@ class DepartamentoPDO {
      *
      * @param string $codDepartamento Codigo del Departamento a editar
      * @param string $descDepartamento Descripción del Departamento a editar
-     * @param float $volumenDeNegocio Volumen de Negocio del Departamento a editar
+     * @param double $volumenDeNegocio Volumen de Negocio del Departamento a editar
      * 
      * @return PDOStatment Devuelve el resultado de la coonsulta
      */
