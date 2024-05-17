@@ -24,11 +24,20 @@ if (isset($_REQUEST['ConsultarModificarDepartamento'])) {
     exit;
 }
 
-// Estructura del botón editarDepartamento, si el usuario pulsa el botón del icono de un 'lapiz'
+// Estructura del botón borar Departamento, si el usuario pulsa el botón del icono de una 'papelera'
 if (isset($_REQUEST['borrar'])) {
-    $_SESSION['codDepartamentoActual'] = $_REQUEST['ConsultarModificarDepartamento']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
+    $_SESSION['codDepartamentoActual'] = $_REQUEST['borrar']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
-    $_SESSION['paginaEnCurso'] = 'editarDepartamento';
+    $_SESSION['paginaEnCurso'] = 'eliminarDepartamento';
+    header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
+    exit;
+}
+
+// Estructura del botón añadir Departamento, si el usuario pulsa el botón de añadir departamento
+if (isset($_REQUEST['añadir'])) {
+    $_SESSION['codDepartamentoActual'] = $_REQUEST['añadir']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'añadirDepartamento';
     header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
     exit;
 }

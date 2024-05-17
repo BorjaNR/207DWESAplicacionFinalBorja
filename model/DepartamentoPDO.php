@@ -115,4 +115,42 @@ class DepartamentoPDO {
 
         return DBPDO::ejecutaConsulta($consulta); // Ejecutamos y devolvemos la consulta
     }
+    
+    /**
+     * Eliminar un Departamento
+     *
+     * @param string $codDepartamento Codigo del Departamento a eliminar
+     * 
+     * @return PDOStatment Devuelve el resultado de la coonsulta
+     */
+     public static function eliminaDepartamento($codDepartamento) {
+        // Consulta de busqueda según el valor del parametro introducido
+        $consulta = <<<CONSULTA
+            DELETE FROM T02_Departamento WHERE T02_CodDepartamento = '{$codDepartamento}';
+        CONSULTA;
+
+        return DBPDO::ejecutaConsulta($consulta); // Ejecutamos y devolvemos la consulta
+    }
+
+    /**
+     * Metodo que permite dar de alta un nuevo departamento en la BD
+     * 
+     * @param string $codDepartamento El codigo de departamento
+     * @param string $descDepartamento La descripción de departamento
+     * @param float $volumenDeNegocio El volumen de negocio de departamento
+     * 
+     * @return boolean false | object Departamento Devuelve un objeto Departamento nuevo si se ha podido crear, de lo contrario devuelve un @boolean que sera 'false'
+     */
+    public static function altaDepartamento($codDepartamento, $descDepartamento, $volumenDeNegocio) {
+        //CONSULTA SQL - INSERT
+        $consulta = <<<CONSULTA
+            INSERT INTO T02_Departamento VALUES ('{$codDepartamento}','{$descDepartamento}', now(), '{$volumenDeNegocio}', null);
+        CONSULTA;
+
+        if (DBPDO::ejecutaConsulta($consulta)) { // Ejecuto la consulta
+            return new Departamento($codDepartamento, $descDepartamento, $volumenDeNegocio, date('Y-m-d H:i:s'), null); // Creo el Departamento con los valores recogidos
+        } else {
+            return false; // Si la consulta falla devuelvo 'false'
+        }
+    }
 }

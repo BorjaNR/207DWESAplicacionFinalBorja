@@ -27,7 +27,10 @@ $controller = [
     'registro' => 'controller/cRegistro.php',
     'rest' => 'controller/cREST.php',
     'mto_departamento' => 'controller/cMtoDepartamento.php',
-    'editarDepartamento' => 'controller/cConsultarModificarDepartamento.php'
+    'editarDepartamento' => 'controller/cConsultarModificarDepartamento.php',
+    'eliminarDepartamento' => 'controller/cEliminarDepartamento.php',
+    'añadirDepartamento' => 'controller/cAltaDepartamento.php',
+    'bajaLogica' => 'controller/cBajaLogicaDepartamento.php'
 ];
 
 $view = [
@@ -41,5 +44,8 @@ $view = [
     'registro' => 'view/vRegistro.php',
     'rest' => 'view/vREST.php',
     'mto_departamento' => 'view/vMtoDepartamento.php',
-    'editarDepartamento' => 'view/vConsultarModificarDepartamento.php'
+    'editarDepartamento' => 'view/vConsultarModificarDepartamento.php',
+    'eliminarDepartamento' => 'view/vEliminarDepartamento.php',
+    'añadirDepartamento' => 'view/vAltaDepartamento.php',
+    'bajaLogica' => 'view/vBajaLogicaDepartamento.php'
 ];
