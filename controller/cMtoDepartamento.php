@@ -42,6 +42,24 @@ if (isset($_REQUEST['añadir'])) {
     exit;
 }
 
+// Estructura del botón baja Departamento, si el usuario pulsa el botón de añadir departamento
+if (isset($_REQUEST['bajaLogica'])) {
+    $_SESSION['codDepartamentoActual'] = $_REQUEST['bajaLogica']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'bajaLogica';
+    header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
+    exit;
+}
+
+// Estructura del botón rehabilitar Departamento, si el usuario pulsa el botón de añadir departamento
+if (isset($_REQUEST['rehabilitar'])) {
+    $_SESSION['codDepartamentoActual'] = $_REQUEST['rehabilitar']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'rehabilitacion';
+    header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
+    exit;
+}
+
 //Creamos e inicializamos las variables imprescindibles para este ejercicio
 $entradaOK = true; //Variable que nos indica que todo va bien
 //Array donde recogemos los mensajes de error

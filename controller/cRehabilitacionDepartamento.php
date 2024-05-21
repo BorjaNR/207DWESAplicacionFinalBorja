@@ -12,8 +12,12 @@
  */
 $oDepartamentoSeleccionado = DepartamentoPDO::buscaDepartamentoPorCod($_SESSION['codDepartamentoActual']);
 
-if(is_null($oDepartamentoSeleccionado->getFechaBajaDepartamento())){
-    DepartamentoPDO::bajaLogicaDepartamento($_SESSION['codDepartamentoActual']);
+/*
+ * Comrpbamos que la fecha baja no sea null y
+ * damos de alta al departameno
+ */
+if(!is_null($oDepartamentoSeleccionado->getFechaBajaDepartamento())){
+    DepartamentoPDO::rehabilitacionDepartamento($_SESSION['codDepartamentoActual']);
 }
 
 $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];

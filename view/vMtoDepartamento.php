@@ -16,7 +16,7 @@
             <tr>
                 <td colspan="3"><label class="form-label">Descripcion de Departamento</label></td>
                 <td colspan="3"><textarea class="form-control" rows="1" name="DescDepartamento"><?php echo isset($_SESSION['criterioBusquedaDepartamentos']['descDepartamento']) ? $_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] : "" ?></textarea></td>
-                <td colspan="3"><?php echo (!empty($aErrores["DescDepartamento"]) ? '<span style="color: red;">' . $aErrores["DescDepartamento"] . '</span>' : ''); //Esto es para mostrar el mensaje de error en color rojo      ?></td>
+                <td colspan="3"><?php echo (!empty($aErrores["DescDepartamento"]) ? '<span style="color: red;">' . $aErrores["DescDepartamento"] . '</span>' : ''); //Esto es para mostrar el mensaje de error en color rojo        ?></td>
                 <td colspan="3"><input class="btn btn-primary" rows="1" name="enviar" type="submit" value=Buscar></td>
             </tr>
         </table>
@@ -43,16 +43,31 @@
             echo ("<td>" . $aDepartamento['fechaBajaDep'] . "</td>");
             // Formulario para editar
             echo("<td class='d-flex'>");
-                echo ("<form method='post'>");
-                echo ("<input type='hidden' name='ConsultarModificarDepartamento' value='" . $aDepartamento['codDepartamento'] . "'>");
-                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/editar.png' alt='EDIT' width='15' height='10'></button>");
-                echo ("</form>");
+            echo ("<form method='post'>");
+            echo ("<input type='hidden' name='ConsultarModificarDepartamento' value='" . $aDepartamento['codDepartamento'] . "'>");
+            echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/editar.png' alt='EDIT' width='15' height='10'></button>");
+            echo ("</form>");
             // Formulario para eliminar
+            echo ("<form method='post'>");
+            echo ("<input type='hidden' name='borrar' value='" . $aDepartamento['codDepartamento'] . "'>");
+            echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/borrar.png' alt='DELETE' width='15' height='10'></button>");
+            echo ("</form>");
+            // Formulario para baja lógica
+            // Compruebo la variable que almacena la fecha de baja para mostrar/ocultar el elemento
+            if (empty($aDepartamento['fechaBajaDep'])) {
                 echo ("<form method='post'>");
-                echo ("<input type='hidden' name='borrar' value='" . $aDepartamento['codDepartamento'] . "'>");
-                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/borrar.png' alt='DELETE' width='15' height='10'></button>");
+                echo ("<input type='hidden' name='bajaLogica' value='" . $aDepartamento['codDepartamento'] . "'>");
+                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/bajaLogica.png' alt='ALTA' width='15' height='10'></button>");
                 echo ("</form>");
-            echo("</td>");
+            }
+            // Formulario para rehabilitacion
+            // Compruebo la variable que almacena la fecha de baja para mostrar/ocultar el elemento
+            if (!empty($aDepartamento['fechaBajaDep'])) {
+                echo ("<form method='post'>");
+                echo ("<input type='hidden' name='rehabilitar' value='" . $aDepartamento['codDepartamento'] . "'>");
+                echo ("<button type='submit' style='margin-right: 5px;'><img src='webroot/images/rehabilitar.png' alt='REHABILITACION' width='15' height='10'></button>");
+                echo ("</form>");
+            }
             echo "</tr>";
         }
         ?>
