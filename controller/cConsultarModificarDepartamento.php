@@ -32,8 +32,8 @@ $oDepartamentoSeleccionado = DepartamentoPDO::buscaDepartamentoPorCod($_SESSION[
 if (isset($_REQUEST['enviar'])) {
     //Valido la entrada de descripcion departamento
     $aErrores = [
-        'T02_DescDepartamento' => validacionFormularios::comprobarAlfabetico($_REQUEST['T02_DescDepartamento'], 255, 1, 0),
-        'T02_VolumenDeNegocio' => validacionFormularios::comprobarFloat($_REQUEST['T02_VolumenDeNegocio'], PHP_FLOAT_MAX, PHP_FLOAT_MIN, 0)
+        'T02_DescDepartamento' => validacionFormularios::comprobarAlfabetico($_REQUEST['T02_DescDepartamento'], 255, 1, 1),
+        'T02_VolumenDeNegocio' => validacionFormularios::comprobarFloat($_REQUEST['T02_VolumenDeNegocio'], PHP_FLOAT_MAX, PHP_FLOAT_MIN, 1)
     ];
     // Recorre aErrores para ver si hay alguno
     foreach ($aErrores as $campo => $valor) {

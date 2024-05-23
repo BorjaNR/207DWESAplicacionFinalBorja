@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['getarchivoerror_0',['getArchivoError',['../class_error_app.html#a20d9d28d8d1fa5cc43602a2d580d338b',1,'ErrorApp']]],
+  ['getcoddepartamento_1',['getCodDepartamento',['../class_departamento.html#a4c17dfa2be25810e84477c6ce051a127',1,'Departamento']]],
+  ['getcoderror_2',['getCodError',['../class_error_app.html#a166fa4993ad91f07a7a69a376b4702eb',1,'ErrorApp']]],
+  ['getcodusuario_3',['getCodUsuario',['../class_usuario.html#af6744d9c5d29fc68b5e9a5fb2fab245e',1,'Usuario']]],
+  ['getdescdepartamento_4',['getDescDepartamento',['../class_departamento.html#aea34946343ede8a630a5bbf7455e6274',1,'Departamento']]],
+  ['getdescerror_5',['getDescError',['../class_error_app.html#a50aa4852f7a59392669b60216e1867b5',1,'ErrorApp']]],
+  ['getdescusuario_6',['getDescUsuario',['../class_usuario.html#a38bc2254f1841238d4f4a4851ea5258d',1,'Usuario']]],
+  ['getfechabajadepartamento_7',['getFechaBajaDepartamento',['../class_departamento.html#a817c3be61a49dd183d4a553962802cfe',1,'Departamento']]],
+  ['getfechacreaciondepartamento_8',['getFechaCreacionDepartamento',['../class_departamento.html#a61186df0d39b62d81eef2a9cfdd0fca7',1,'Departamento']]],
+  ['getfechahoraultimaconexion_9',['getFechaHoraUltimaConexion',['../class_usuario.html#abcc0f031ac30c407e3c8daeeed1adb0d',1,'Usuario']]],
+  ['getfechahoraultimaconexionanterior_10',['getFechaHoraUltimaConexionAnterior',['../class_usuario.html#a79bab760d5ef47d7e0406610c08b79a3',1,'Usuario']]],
+  ['getfoto_11',['getFoto',['../class_foto_nasa.html#a5005af97620205e15328a884a963510f',1,'FotoNasa']]],
+  ['getlineaerror_12',['getLineaError',['../class_error_app.html#afc6b991565a6e556c142d7aa6ceb6d61',1,'ErrorApp']]],
+  ['getnumacceso_13',['getNumAcceso',['../class_usuario.html#a4791f9f966041a7ada07c34c0507f19f',1,'Usuario']]],
+  ['getpassword_14',['getPassword',['../class_usuario.html#a04e0957baeb7acde9c0c86556da2d43f',1,'Usuario']]],
+  ['getperfil_15',['getPerfil',['../class_usuario.html#a22a2936d4856077edac47e6dbf430bab',1,'Usuario']]],
+  ['getprediccion_16',['getPrediccion',['../class_prediccion_aemet.html#a9e75587d2ce5d3be53140ff6b59e18e9',1,'PrediccionAemet']]],
+  ['gettitulo_17',['getTitulo',['../class_foto_nasa.html#afc16954a3de7c833efe1c1b55603aed8',1,'FotoNasa']]],
+  ['getvolumendenegocio_18',['getVolumenDeNegocio',['../class_departamento.html#afc68df14f61f2df4040fa2ef7ca0ba9c',1,'Departamento']]]
+];

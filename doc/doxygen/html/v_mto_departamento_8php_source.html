@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DWESAplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/view/vMtoDepartamento.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DWESAplicacionFinalBorja
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('v_mto_departamento_8php_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">vMtoDepartamento.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="v_mto_departamento_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>?&gt;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>&lt;h1 <span class="keyword">class</span>=<span class="stringliteral">&quot;text-secondary&quot;</span>&gt;Mto Departamentos&lt;/h1&gt;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>&lt;form <span class="keyword">class</span>=<span class="stringliteral">&quot;position-absolute top-0 end-0&quot;</span> style=<span class="stringliteral">&quot;margin-top: 85px; margin-right: 15px&quot;</span> method=<span class="stringliteral">&quot;post&quot;</span> action=<span class="stringliteral">&quot;&quot;</span>&gt;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    &lt;input <span class="keyword">class</span>=<span class="stringliteral">&quot;btn btn-danger d-block&quot;</span><span class="stringliteral">&quot; type=&quot;</span>submit<span class="stringliteral">&quot; name=&quot;</span>volver<span class="stringliteral">&quot; value=&quot;</span>Volver<span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="stringliteral">    &lt;input class=&quot;</span>btn btn-primary d-block<span class="stringliteral">&quot; style=&quot;</span>margin-top: 10px<span class="stringliteral">&quot; type=&quot;</span>submit<span class="stringliteral">&quot; name=&quot;</span>añadir<span class="stringliteral">&quot; value=&quot;</span>Añadir <a class="code hl_class" href="class_departamento.html">Departamento</a><span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="stringliteral">&lt;/form&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="stringliteral">&lt;form class=&quot;</span>w-10<span class="stringliteral">&quot; style=&quot;</span>margin:50px<span class="stringliteral">&quot; name=&quot;</span>fomrulario<span class="stringliteral">&quot; action=&quot;</span>&lt;?php echo $_SERVER[<span class="stringliteral">&#39;PHP_SELF&#39;</span>]; ?&gt;<span class="stringliteral">&quot; method=&quot;</span>post<span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="stringliteral">    &lt;div class=&quot;</span>container t-container<span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="stringliteral">        &lt;table class=&quot;</span>table table-striped<span class="stringliteral">&quot;&gt; </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="stringliteral">            &lt;tr&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="stringliteral">                &lt;td colspan=&quot;</span>3<span class="stringliteral">&quot;&gt;&lt;label class=&quot;</span>form-label<span class="stringliteral">&quot;&gt;Descripcion de Departamento&lt;/label&gt;&lt;/td&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="stringliteral">                &lt;td colspan=&quot;</span>3<span class="stringliteral">&quot;&gt;&lt;textarea class=&quot;</span>form-control<span class="stringliteral">&quot; rows=&quot;</span>1<span class="stringliteral">&quot; name=&quot;</span>DescDepartamento<span class="stringliteral">&quot;&gt;&lt;?php echo isset($_SESSION[&#39;criterioBusquedaDepartamentos&#39;][&#39;descDepartamento&#39;]) ? $_SESSION[&#39;criterioBusquedaDepartamentos&#39;][&#39;descDepartamento&#39;] : &quot;</span><span class="stringliteral">&quot; ?&gt;&lt;/textarea&gt;&lt;/td&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="stringliteral">                &lt;td colspan=&quot;</span>3<span class="stringliteral">&quot;&gt;&lt;?php echo (!empty($aErrores[&quot;</span>DescDepartamento<span class="stringliteral">&quot;]) ? &#39;&lt;span style=&quot;</span><a class="code hl_variable" href="v_alta_departamento_8php.html#ac5c52bc075eda833af97458e7c3ff0e0">color</a>: red;<span class="stringliteral">&quot;&gt;&#39; . $aErrores[&quot;</span>DescDepartamento<span class="stringliteral">&quot;] . &#39;&lt;/span&gt;&#39; : &#39;&#39;); //Esto es para mostrar el mensaje de error en color rojo        ?&gt;&lt;/td&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">                &lt;td colspan=&quot;</span>3<span class="stringliteral">&quot;&gt;&lt;input class=&quot;</span>btn btn-primary<span class="stringliteral">&quot; rows=&quot;</span>1<span class="stringliteral">&quot; name=&quot;</span>enviar<span class="stringliteral">&quot; type=&quot;</span>submit<span class="stringliteral">&quot; value=Buscar&gt;&lt;/td&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="stringliteral">            &lt;/tr&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral">        &lt;/table&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">    &lt;/div&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">&lt;/form&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">&lt;div class=&quot;</span>container t-container<span class="stringliteral">&quot; style=&quot;</span>margin-top: 100px;margin-bottom: 100px<span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">    &lt;table class=&quot;</span>table table-striped table-bordered<span class="stringliteral">&quot; style=&quot;</span>margin-bottom: 75px; margin-top: 75px<span class="stringliteral">&quot;&gt; </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">        &lt;tr class=&quot;</span>table-secondary<span class="stringliteral">&quot;&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="stringliteral">            &lt;th&gt;Codigo de Departamento&lt;/th&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">            &lt;th&gt;Descripcion de Departamento&lt;/th&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral">            &lt;th&gt;Fecha de Creacion&lt;/th&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">            &lt;th&gt;Volumen de Negocio&lt;/th&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="stringliteral">            &lt;th&gt;Fecha de Baja&lt;/th&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">            &lt;th&gt;Acciones&lt;/th&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">        &lt;/tr&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">        &lt;?php</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="stringliteral">        //Mostramos los departamentos en una tabla</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="stringliteral">        foreach ($aDepartamentoVista as $aDepartamento) {</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="stringliteral">            echo &quot;</span>&lt;tr&gt;<span class="stringliteral">&quot;;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="stringliteral">            echo (&quot;</span>&lt;td&gt;<span class="stringliteral">&quot; . $aDepartamento[&#39;codDepartamento&#39;] . &quot;</span>&lt;/td&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="stringliteral">            echo (&quot;</span>&lt;td&gt;<span class="stringliteral">&quot; . $aDepartamento[&#39;descDepartamento&#39;] . &quot;</span>&lt;/td&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="stringliteral">            echo (&quot;</span>&lt;td&gt;<span class="stringliteral">&quot; . $aDepartamento[&#39;fechaCreacionDep&#39;] . &quot;</span>&lt;/td&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="stringliteral">            echo (&quot;</span>&lt;td&gt;<span class="stringliteral">&quot; . $aDepartamento[&#39;volumenDeNegocio&#39;] . &quot;</span>&lt;/td&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="stringliteral">            echo (&quot;</span>&lt;td&gt;<span class="stringliteral">&quot; . $aDepartamento[&#39;fechaBajaDep&#39;] . &quot;</span>&lt;/td&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="stringliteral">            // Formulario para editar</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="stringliteral">            echo(&quot;</span>&lt;td <span class="keyword">class</span>=<span class="stringliteral">&#39;d-flex&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="stringliteral">            echo (&quot;</span>&lt;form method=<span class="stringliteral">&#39;post&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="stringliteral">            echo (&quot;</span>&lt;input type=<span class="stringliteral">&#39;hidden&#39;</span> name=<span class="stringliteral">&#39;ConsultarModificarDepartamento&#39;</span> value=<span class="stringliteral">&#39;&quot; . $aDepartamento[&#39;</span>codDepartamento<span class="stringliteral">&#39;] . &quot;&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="stringliteral">            echo (&quot;</span>&lt;button type=<span class="stringliteral">&#39;submit&#39;</span> style=<span class="stringliteral">&#39;margin-right: 5px;&#39;</span>&gt;&lt;img src=<span class="stringliteral">&#39;webroot/images/editar.png&#39;</span> alt=<span class="stringliteral">&#39;EDIT&#39;</span> <a class="code hl_variable" href="v_alta_departamento_8php.html#abe4cfedc670c50cd9e7ce08e54970a02">width</a>=<span class="stringliteral">&#39;15&#39;</span> height=<span class="stringliteral">&#39;10&#39;</span>&gt;&lt;/button&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="stringliteral">            echo (&quot;</span>&lt;/form&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="stringliteral">            // Formulario para eliminar</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="stringliteral">            echo (&quot;</span>&lt;form method=<span class="stringliteral">&#39;post&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="stringliteral">            echo (&quot;</span>&lt;input type=<span class="stringliteral">&#39;hidden&#39;</span> name=<span class="stringliteral">&#39;borrar&#39;</span> value=<span class="stringliteral">&#39;&quot; . $aDepartamento[&#39;</span>codDepartamento<span class="stringliteral">&#39;] . &quot;&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="stringliteral">            echo (&quot;</span>&lt;button type=<span class="stringliteral">&#39;submit&#39;</span> style=<span class="stringliteral">&#39;margin-right: 5px;&#39;</span>&gt;&lt;img src=<span class="stringliteral">&#39;webroot/images/borrar.png&#39;</span> alt=<span class="stringliteral">&#39;DELETE&#39;</span> <a class="code hl_variable" href="v_alta_departamento_8php.html#abe4cfedc670c50cd9e7ce08e54970a02">width</a>=<span class="stringliteral">&#39;15&#39;</span> height=<span class="stringliteral">&#39;10&#39;</span>&gt;&lt;/button&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="stringliteral">            echo (&quot;</span>&lt;/form&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="stringliteral">            // Formulario para baja lógica</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="stringliteral">            // Compruebo la variable que almacena la fecha de baja para mostrar/ocultar el elemento</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="stringliteral">            if (empty($aDepartamento[&#39;fechaBajaDep&#39;])) {</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="stringliteral">                echo (&quot;</span>&lt;form method=<span class="stringliteral">&#39;post&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral">                echo (&quot;</span>&lt;input type=<span class="stringliteral">&#39;hidden&#39;</span> name=<span class="stringliteral">&#39;bajaLogica&#39;</span> value=<span class="stringliteral">&#39;&quot; . $aDepartamento[&#39;</span>codDepartamento<span class="stringliteral">&#39;] . &quot;&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral">                echo (&quot;</span>&lt;button type=<span class="stringliteral">&#39;submit&#39;</span> style=<span class="stringliteral">&#39;margin-right: 5px;&#39;</span>&gt;&lt;img src=<span class="stringliteral">&#39;webroot/images/bajaLogica.png&#39;</span> alt=<span class="stringliteral">&#39;ALTA&#39;</span> <a class="code hl_variable" href="v_alta_departamento_8php.html#abe4cfedc670c50cd9e7ce08e54970a02">width</a>=<span class="stringliteral">&#39;15&#39;</span> height=<span class="stringliteral">&#39;10&#39;</span>&gt;&lt;/button&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="stringliteral">                echo (&quot;</span>&lt;/form&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">            // Formulario para rehabilitacion</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">            // Compruebo la variable que almacena la fecha de baja para mostrar/ocultar el elemento</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral">            if (!empty($aDepartamento[&#39;fechaBajaDep&#39;])) {</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="stringliteral">                echo (&quot;</span>&lt;form method=<span class="stringliteral">&#39;post&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="stringliteral">                echo (&quot;</span>&lt;input type=<span class="stringliteral">&#39;hidden&#39;</span> name=<span class="stringliteral">&#39;rehabilitar&#39;</span> value=<span class="stringliteral">&#39;&quot; . $aDepartamento[&#39;</span>codDepartamento<span class="stringliteral">&#39;] . &quot;&#39;</span>&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="stringliteral">                echo (&quot;</span>&lt;button type=<span class="stringliteral">&#39;submit&#39;</span> style=<span class="stringliteral">&#39;margin-right: 5px;&#39;</span>&gt;&lt;img src=<span class="stringliteral">&#39;webroot/images/rehabilitar.png&#39;</span> alt=<span class="stringliteral">&#39;REHABILITACION&#39;</span> <a class="code hl_variable" href="v_alta_departamento_8php.html#abe4cfedc670c50cd9e7ce08e54970a02">width</a>=<span class="stringliteral">&#39;15&#39;</span> height=<span class="stringliteral">&#39;10&#39;</span>&gt;&lt;/button&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="stringliteral">                echo (&quot;</span>&lt;/form&gt;<span class="stringliteral">&quot;);</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="stringliteral">            }</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="stringliteral">            echo &quot;</span>&lt;/tr&gt;<span class="stringliteral">&quot;;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral">        }</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="stringliteral">        ?&gt;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="stringliteral">    &lt;/table&gt;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="stringliteral">&lt;/div&gt;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="stringliteral"></span> </div>
+<div class="ttc" id="aclass_departamento_html"><div class="ttname"><a href="class_departamento.html">Departamento</a></div><div class="ttdef"><b>Definition</b> <a href="_departamento_8php_source.html#l00019">Departamento.php:19</a></div></div>
+<div class="ttc" id="av_alta_departamento_8php_html_abe4cfedc670c50cd9e7ce08e54970a02"><div class="ttname"><a href="v_alta_departamento_8php.html#abe4cfedc670c50cd9e7ce08e54970a02">width</a></div><div class="ttdeci">form label mb d flex justify content center form control mw width</div><div class="ttdef"><b>Definition</b> <a href="v_alta_departamento_8php_source.html#l00032">vAltaDepartamento.php:32</a></div></div>
+<div class="ttc" id="av_alta_departamento_8php_html_ac5c52bc075eda833af97458e7c3ff0e0"><div class="ttname"><a href="v_alta_departamento_8php.html#ac5c52bc075eda833af97458e7c3ff0e0">color</a></div><div class="ttdeci">&lt;/div &gt;&lt; div &gt;&lt; label class=&quot;form-label&quot;&gt; Descripcion de departamento&lt;/label &gt;&lt;/div &gt;&lt; div class=&quot;mb-3 d-flex justify-content-center&quot;&gt;&lt; input type=&quot;text&quot; class=&quot;form-control bg-warning mw-100&quot; placeholder=&quot;Departamento de Energia&quot; style=&quot;width: 261.66px; height: 38px;&quot; name=&quot;DescDepartamento&quot; value=&quot;&lt;?php echo (isset($_REQUEST['DescDepartamento']) ? $_REQUEST['DescDepartamento'] : ''); ?&gt; color</div><div class="ttdef"><b>Definition</b> <a href="v_alta_departamento_8php_source.html#l00026">vAltaDepartamento.php:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ba4d2f79aed1221873120bc7786b9082.html">ProyectosNB</a></li><li class="navelem"><a class="el" href="dir_4442b386d8f30281c1f8f8d008c5a690.html">207DWESAplicacionFinalBorja</a></li><li class="navelem"><a class="el" href="dir_cc2e9384e9cb38e0faef0f624b6085fd.html">view</a></li><li class="navelem"><a class="el" href="v_mto_departamento_8php.html">vMtoDepartamento.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

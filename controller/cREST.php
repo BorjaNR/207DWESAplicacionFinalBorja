@@ -36,6 +36,10 @@ $oFotoNasaEnCurso = REST::apiNasa($_SESSION['nasaFechaEnCurso']);
 $aVistaRest['nasa']['titulo'] = $oFotoNasaEnCurso->getTitulo();
 $aVistaRest['nasa']['foto'] = $oFotoNasaEnCurso->getFoto();
 
+/*if (isset($_SESSION['nasaFechaEnCurso'])) {
+    
+}
+*/
 $_SESSION['AEMETProvinciaEnCurso'] = '49';
 
 //Guardamos en sesion la provincia

@@ -5,7 +5,13 @@ USE DB207DWESAplicacionFinalBorja;
 INSERT INTO T02_Departamento (T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio, T02_FechaBajaDepartamento) VALUES
     ('AAA', 'Departamento de Ventas', NOW(), 100000.50, NULL),
     ('AAB', 'Departamento de Marketing', NOW(), 50089.50, NULL),
-    ('AAC', 'Departamento de Finanzas', NOW(), 600.50, '2023-11-13 13:06:00');
+    ('AAC', 'Departamento de Finanzas', NOW(), 600.50, '2023-11-13 13:06:00'),
+    ('AAD', 'Departamento de Administracion', NOW(), 80000.4, NULL),
+    ('AAE', 'Departamento de I+D', NOW(), 95000.7, NULL),
+    ('AAF', 'Departamento de Inversiones', NOW(), 75000.2, NULL),
+    ('AAG', 'Departamento de Recursos Humanos', NOW(), 85000.8, NULL),
+    ('AAH', 'Departamento de Tecnología', NOW(), 90000.4, NULL),
+    ('AAI', 'Departamento de Soporte', NOW(), 115000, NULL);
 
 -- Inserto los datos iniciales en la tabla T01_Usuario con contraseñas cifradas en SHA-256
 INSERT INTO T01_Usuario (T01_CodUsuario, T01_Password, T01_DescUsuario, T01_Perfil) VALUES
