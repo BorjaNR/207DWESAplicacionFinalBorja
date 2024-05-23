@@ -8,7 +8,7 @@
  */
 
 /** 
- * Clase de Departamento
+ * Clase de DepartamentoPDO
  * 
  * @author Borja Nuñez Refoyo
  * @version 2.0 

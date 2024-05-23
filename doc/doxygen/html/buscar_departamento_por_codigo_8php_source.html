@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DWESAplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/api/buscarDepartamentoPorCodigo.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DWESAplicacionFinalBorja
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('buscar_departamento_por_codigo_8php_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">buscarDepartamentoPorCodigo.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="buscar_departamento_por_codigo_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>require_once <span class="stringliteral">&#39;config/confDBPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>require_once <span class="stringliteral">&#39;model/DB.php&#39;</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>require_once <span class="stringliteral">&#39;model/DBPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>require_once <span class="stringliteral">&#39;model/Departamento.php&#39;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>require_once <span class="stringliteral">&#39;model/DepartamentoPDO.php&#39;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//Creamos e inicializamos las variables imprescindibles para este ejercicio</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">   16</a></span><a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">$entradaOK</a> = <span class="keyword">true</span>; <span class="comment">//Variable que nos indica que todo va bien</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Inicializo las variables para la lógica</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">   19</a></span><a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a> = [</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>   <span class="stringliteral">&#39;codigo&#39;</span> =&gt; [],</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="stringliteral">&#39;mensaje&#39;</span> =&gt; []</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>];</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//Controlo que he recibido el codigo departamento</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordflow">if</span> (isset($_REQUEST[<span class="stringliteral">&#39;codDepartamento&#39;</span>])) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">    * Recuperamos el código del departamento seleccionado anteriormente por medio de una variable de sesión</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    * Y usando el metodo &#39;buscaDepartamentoPorCod&#39; de la clase &#39;DepartamentoPDO&#39; recuperamos el objeto completo</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    $oDepartamento = DepartamentoPDO::buscaDepartamentoPorCod(<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;codDepartamento&#39;</span>]);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span>($oDepartamento){</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        $aDepartamento = [</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="stringliteral">&#39;CodDepartamento&#39;</span> =&gt; $oDepartamento-&gt;getCodDepartamento(),</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="stringliteral">&#39;DescDepartamento&#39;</span> =&gt; $oDepartamento-&gt;getDescDepartamento(),</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="stringliteral">&#39;FechaCreacion&#39;</span> =&gt; $oDepartamento-&gt;getFechaCreacionDepartamento(),</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="stringliteral">&#39;Volumen&#39;</span> =&gt; $oDepartamento-&gt;getVolumenDeNegocio(),</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="stringliteral">&#39;FechaBaja&#39;</span> =&gt; $oDepartamento-&gt;getFechaBajaDepartamento()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        ];</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <span class="comment">//Muestro los errores correspondientes</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a>[<span class="stringliteral">&#39;codigo&#39;</span>] = <span class="stringliteral">&#39;404&#39;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a>[<span class="stringliteral">&#39;mensaje&#39;</span>] = <span class="stringliteral">&#39;No se ha encontrado ningun departamento con ese codigo&#39;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">$entradaOK</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="buscar_departamento_por_codigo_8php.html#aa03cadb28307d0bc53f0c6f3b942cf98">   46</a></span>} <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//Muestro los errores correspondientes</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a>[<span class="stringliteral">&#39;codigo&#39;</span>] = <span class="stringliteral">&#39;404&#39;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="buscar_departamento_por_codigo_8php.html#a6230616f7d56a70405a6487e999c1dfd">   49</a></span>    <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a>[<span class="stringliteral">&#39;mensaje&#39;</span>] = <span class="stringliteral">&#39;No ha introducido un codigo de departamento&#39;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">$entradaOK</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//Si esta todo bien codifico el arrray en un json y si no codifico el array de errores en otro json</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordflow">if</span> (<a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">$entradaOK</a>) { </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    echo json_encode($aDepartamento, JSON_PRETTY_PRINT); </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="keywordflow">else</span> { </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    echo json_encode(<a class="code hl_variable" href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a>, JSON_PRETTY_PRINT);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="ttc" id="abuscar_departamento_por_codigo_8php_html_a6f63c5a0557f7da205d6d99f947d58b8"><div class="ttname"><a href="buscar_departamento_por_codigo_8php.html#a6f63c5a0557f7da205d6d99f947d58b8">$aErrores</a></div><div class="ttdeci">$aErrores</div><div class="ttdef"><b>Definition</b> <a href="#l00019">buscarDepartamentoPorCodigo.php:19</a></div></div>
+<div class="ttc" id="abuscar_departamento_por_codigo_8php_html_ab0dcac058225ef7a9871cdb707b90364"><div class="ttname"><a href="buscar_departamento_por_codigo_8php.html#ab0dcac058225ef7a9871cdb707b90364">$entradaOK</a></div><div class="ttdeci">$entradaOK</div><div class="ttdef"><b>Definition</b> <a href="#l00016">buscarDepartamentoPorCodigo.php:16</a></div></div>
+<div class="ttc" id="ac_baja_logica_departamento_8php_html_a4bb3b9d4d87cb0da58f9db7e65f69ef7"><div class="ttname"><a href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a></div><div class="ttdeci">if(is_null($oDepartamentoSeleccionado-&gt;getFechaBajaDepartamento())) $_SESSION['paginaEnCurso']</div><div class="ttdef"><b>Definition</b> <a href="c_baja_logica_departamento_8php_source.html#l00019">cBajaLogicaDepartamento.php:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ba4d2f79aed1221873120bc7786b9082.html">ProyectosNB</a></li><li class="navelem"><a class="el" href="dir_4442b386d8f30281c1f8f8d008c5a690.html">207DWESAplicacionFinalBorja</a></li><li class="navelem"><a class="el" href="dir_50a899c52617767c0407d5fca8349c19.html">api</a></li><li class="navelem"><a class="el" href="buscar_departamento_por_codigo_8php.html">buscarDepartamentoPorCodigo.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

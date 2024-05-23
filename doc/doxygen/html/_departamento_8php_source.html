@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DWESAplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/model/Departamento.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DWESAplicacionFinalBorja
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_departamento_8php_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Departamento.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_departamento_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_departamento.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_departamento.html">Departamento</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span> $codDepartamento;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">private</span> $descDepartamento;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span> $fechaCreacionDepartamento;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">private</span> $volumenDeNegocio;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span> $fechaBajaDepartamento;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_departamento.html#aad4630f9f792e70ad68fb2d2ce42730e">   62</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#aad4630f9f792e70ad68fb2d2ce42730e">__construct</a>($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento = NULL) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        $this-&gt;codDepartamento = $codDepartamento;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        $this-&gt;descDepartamento = $descDepartamento;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        $this-&gt;fechaCreacionDepartamento = $fechaCreacionDepartamento;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        $this-&gt;volumenDeNegocio = $volumenDeNegocio;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        $this-&gt;fechaBajaDepartamento = $fechaBajaDepartamento;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_departamento.html#a4c17dfa2be25810e84477c6ce051a127">   77</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a4c17dfa2be25810e84477c6ce051a127">getCodDepartamento</a>() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> $this-&gt;codDepartamento;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_departamento.html#aea34946343ede8a630a5bbf7455e6274">   88</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#aea34946343ede8a630a5bbf7455e6274">getDescDepartamento</a>() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> $this-&gt;descDepartamento;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_departamento.html#a61186df0d39b62d81eef2a9cfdd0fca7">   99</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a61186df0d39b62d81eef2a9cfdd0fca7">getFechaCreacionDepartamento</a>() {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> $this-&gt;fechaCreacionDepartamento;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_departamento.html#afc68df14f61f2df4040fa2ef7ca0ba9c">  110</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#afc68df14f61f2df4040fa2ef7ca0ba9c">getVolumenDeNegocio</a>() {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> $this-&gt;volumenDeNegocio;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_departamento.html#a817c3be61a49dd183d4a553962802cfe">  121</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a817c3be61a49dd183d4a553962802cfe">getFechaBajaDepartamento</a>() {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> $this-&gt;fechaBajaDepartamento;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_departamento.html#ab47bf6df9e00dd38e08a2070dddcab13">  132</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#ab47bf6df9e00dd38e08a2070dddcab13">setCodDepartamento</a>($codDepartamento) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        $this-&gt;codDepartamento = $codDepartamento;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_departamento.html#a373bd80f97d862daf06bb7df33a4e99a">  143</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a373bd80f97d862daf06bb7df33a4e99a">setDescDepartamento</a>($descDepartamento) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        $this-&gt;descDepartamento = $descDepartamento;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_departamento.html#a70d7a11c2dd551ffe867a5733101ccb6">  154</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a70d7a11c2dd551ffe867a5733101ccb6">setFechaCreacionDepartamento</a>($fechaCreacionDepartamento) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        $this-&gt;fechaCreacionDepartamento = $fechaCreacionDepartamento;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="class_departamento.html#a39026c2031ace2258f9080986a6edb9e">  165</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#a39026c2031ace2258f9080986a6edb9e">setVolumenDeNegocio</a>($volumenDeNegocio) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        $this-&gt;volumenDeNegocio = $volumenDeNegocio;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="foldopen" id="foldopen00176" data-start="{" data-end="}">
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_departamento.html#ae922f000c535e68568b3548005912627">  176</a></span>    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code hl_function" href="class_departamento.html#ae922f000c535e68568b3548005912627">setFechaBajaDepartamento</a>($fechaBajaDepartamento) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        $this-&gt;fechaBajaDepartamento = $fechaBajaDepartamento;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="ttc" id="aclass_departamento_html"><div class="ttname"><a href="class_departamento.html">Departamento</a></div><div class="ttdef"><b>Definition</b> <a href="#l00019">Departamento.php:19</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a373bd80f97d862daf06bb7df33a4e99a"><div class="ttname"><a href="class_departamento.html#a373bd80f97d862daf06bb7df33a4e99a">Departamento\setDescDepartamento</a></div><div class="ttdeci">setDescDepartamento($descDepartamento)</div><div class="ttdef"><b>Definition</b> <a href="#l00143">Departamento.php:143</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a39026c2031ace2258f9080986a6edb9e"><div class="ttname"><a href="class_departamento.html#a39026c2031ace2258f9080986a6edb9e">Departamento\setVolumenDeNegocio</a></div><div class="ttdeci">setVolumenDeNegocio($volumenDeNegocio)</div><div class="ttdef"><b>Definition</b> <a href="#l00165">Departamento.php:165</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a4c17dfa2be25810e84477c6ce051a127"><div class="ttname"><a href="class_departamento.html#a4c17dfa2be25810e84477c6ce051a127">Departamento\getCodDepartamento</a></div><div class="ttdeci">getCodDepartamento()</div><div class="ttdef"><b>Definition</b> <a href="#l00077">Departamento.php:77</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a61186df0d39b62d81eef2a9cfdd0fca7"><div class="ttname"><a href="class_departamento.html#a61186df0d39b62d81eef2a9cfdd0fca7">Departamento\getFechaCreacionDepartamento</a></div><div class="ttdeci">getFechaCreacionDepartamento()</div><div class="ttdef"><b>Definition</b> <a href="#l00099">Departamento.php:99</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a70d7a11c2dd551ffe867a5733101ccb6"><div class="ttname"><a href="class_departamento.html#a70d7a11c2dd551ffe867a5733101ccb6">Departamento\setFechaCreacionDepartamento</a></div><div class="ttdeci">setFechaCreacionDepartamento($fechaCreacionDepartamento)</div><div class="ttdef"><b>Definition</b> <a href="#l00154">Departamento.php:154</a></div></div>
+<div class="ttc" id="aclass_departamento_html_a817c3be61a49dd183d4a553962802cfe"><div class="ttname"><a href="class_departamento.html#a817c3be61a49dd183d4a553962802cfe">Departamento\getFechaBajaDepartamento</a></div><div class="ttdeci">getFechaBajaDepartamento()</div><div class="ttdef"><b>Definition</b> <a href="#l00121">Departamento.php:121</a></div></div>
+<div class="ttc" id="aclass_departamento_html_aad4630f9f792e70ad68fb2d2ce42730e"><div class="ttname"><a href="class_departamento.html#aad4630f9f792e70ad68fb2d2ce42730e">Departamento\__construct</a></div><div class="ttdeci">__construct($codDepartamento, $descDepartamento, $fechaCreacionDepartamento, $volumenDeNegocio, $fechaBajaDepartamento=NULL)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">Departamento.php:62</a></div></div>
+<div class="ttc" id="aclass_departamento_html_ab47bf6df9e00dd38e08a2070dddcab13"><div class="ttname"><a href="class_departamento.html#ab47bf6df9e00dd38e08a2070dddcab13">Departamento\setCodDepartamento</a></div><div class="ttdeci">setCodDepartamento($codDepartamento)</div><div class="ttdef"><b>Definition</b> <a href="#l00132">Departamento.php:132</a></div></div>
+<div class="ttc" id="aclass_departamento_html_ae922f000c535e68568b3548005912627"><div class="ttname"><a href="class_departamento.html#ae922f000c535e68568b3548005912627">Departamento\setFechaBajaDepartamento</a></div><div class="ttdeci">setFechaBajaDepartamento($fechaBajaDepartamento)</div><div class="ttdef"><b>Definition</b> <a href="#l00176">Departamento.php:176</a></div></div>
+<div class="ttc" id="aclass_departamento_html_aea34946343ede8a630a5bbf7455e6274"><div class="ttname"><a href="class_departamento.html#aea34946343ede8a630a5bbf7455e6274">Departamento\getDescDepartamento</a></div><div class="ttdeci">getDescDepartamento()</div><div class="ttdef"><b>Definition</b> <a href="#l00088">Departamento.php:88</a></div></div>
+<div class="ttc" id="aclass_departamento_html_afc68df14f61f2df4040fa2ef7ca0ba9c"><div class="ttname"><a href="class_departamento.html#afc68df14f61f2df4040fa2ef7ca0ba9c">Departamento\getVolumenDeNegocio</a></div><div class="ttdeci">getVolumenDeNegocio()</div><div class="ttdef"><b>Definition</b> <a href="#l00110">Departamento.php:110</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ba4d2f79aed1221873120bc7786b9082.html">ProyectosNB</a></li><li class="navelem"><a class="el" href="dir_4442b386d8f30281c1f8f8d008c5a690.html">207DWESAplicacionFinalBorja</a></li><li class="navelem"><a class="el" href="dir_38d0eff94263a0b78e68e19b31cd36b7.html">model</a></li><li class="navelem"><a class="el" href="_departamento_8php.html">Departamento.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

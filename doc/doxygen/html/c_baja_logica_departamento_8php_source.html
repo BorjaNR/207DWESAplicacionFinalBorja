@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DWESAplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/controller/cBajaLogicaDepartamento.php</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DWESAplicacionFinalBorja
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('c_baja_logica_departamento_8php_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">cBajaLogicaDepartamento.php</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="c_baja_logica_departamento_8php.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>&lt;?php</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * Recuperamos el código del departamento por medio de una variable de sesión y </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * buscamos el Departamento usando la clase &#39;buscaDepartamentoPorCod&#39; de la clase DepartamentoPDO</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="c_baja_logica_departamento_8php.html#a20ba74fa3ff0c3c9385b7e23d8fd779e">   13</a></span><a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a20ba74fa3ff0c3c9385b7e23d8fd779e">$oDepartamentoSeleccionado</a> = DepartamentoPDO::buscaDepartamentoPorCod(<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;codDepartamentoActual&#39;</span>]);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordflow">if</span>(is_null(<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a20ba74fa3ff0c3c9385b7e23d8fd779e">$oDepartamentoSeleccionado</a>-&gt;getFechaBajaDepartamento())){</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    DepartamentoPDO::bajaLogicaDepartamento(<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;codDepartamentoActual&#39;</span>]);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">   19</a></span><a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>] = <a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;paginaAnterior&#39;</span>];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>header(<span class="stringliteral">&#39;Location: indexAplicacionFinal.php&#39;</span>); <span class="comment">// Redirecciono al index de la APP</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="c_baja_logica_departamento_8php.html#a6733eb5f605d09eaede9845835d71c4e">   21</a></span><a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a>[<span class="stringliteral">&#39;layout&#39;</span>];</div>
+<div class="ttc" id="ac_baja_logica_departamento_8php_html_a20ba74fa3ff0c3c9385b7e23d8fd779e"><div class="ttname"><a href="c_baja_logica_departamento_8php.html#a20ba74fa3ff0c3c9385b7e23d8fd779e">$oDepartamentoSeleccionado</a></div><div class="ttdeci">$oDepartamentoSeleccionado</div><div class="ttdef"><b>Definition</b> <a href="#l00013">cBajaLogicaDepartamento.php:13</a></div></div>
+<div class="ttc" id="ac_baja_logica_departamento_8php_html_a4bb3b9d4d87cb0da58f9db7e65f69ef7"><div class="ttname"><a href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a></div><div class="ttdeci">if(is_null($oDepartamentoSeleccionado-&gt;getFechaBajaDepartamento())) $_SESSION['paginaEnCurso']</div><div class="ttdef"><b>Definition</b> <a href="#l00019">cBajaLogicaDepartamento.php:19</a></div></div>
+<div class="ttc" id="ac_baja_logica_departamento_8php_html_a6733eb5f605d09eaede9845835d71c4e"><div class="ttname"><a href="c_baja_logica_departamento_8php.html#a6733eb5f605d09eaede9845835d71c4e">exit</a></div><div class="ttdeci">exit</div><div class="ttdef"><b>Definition</b> <a href="#l00021">cBajaLogicaDepartamento.php:21</a></div></div>
+<div class="ttc" id="aconf_a_p_p_8php_html_acccf2eac8663e0cebe8101e90fbab089"><div class="ttname"><a href="conf_a_p_p_8php.html#acccf2eac8663e0cebe8101e90fbab089">$view</a></div><div class="ttdeci">$view</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00037">confAPP.php:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_ba4d2f79aed1221873120bc7786b9082.html">ProyectosNB</a></li><li class="navelem"><a class="el" href="dir_4442b386d8f30281c1f8f8d008c5a690.html">207DWESAplicacionFinalBorja</a></li><li class="navelem"><a class="el" href="dir_d8aba60bb17f481eb9b0c0cc2be7e409.html">controller</a></li><li class="navelem"><a class="el" href="c_baja_logica_departamento_8php.html">cBajaLogicaDepartamento.php</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

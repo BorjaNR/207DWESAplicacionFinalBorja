@@ -57,4 +57,27 @@ class REST{
             exit;
         }
     }
+    
+    public static function apiDepartamentos($param) {
+        try{
+           // obtenemos el resultado del servidor del api rest
+            $resultado = file_get_contents();
+            
+            // Devolvemos el array devuelto por json_decode
+            $archivoApi = json_decode($resultado, true);
+            
+            if (isset($archivoApi)){
+                $prediccionAemet = new PrediccionAemet($archivoApi['datos']);
+                return $prediccionAemet;
+            }else{
+                return null;
+            } 
+        } catch (Exception $excepcion) {
+            $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+            $_SESSION['paginaEnCurso'] = 'error';
+            $_SESSION['error'] = new ErrorApp($excepcion->getCode(), $excepcion->getMessage(), $excepcion->getFile(), $excepcion->getLine());
+            header('Location:indexAplicacionFinal.php');
+            exit;
+        }
+    }
 }
