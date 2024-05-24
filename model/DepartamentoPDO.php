@@ -193,7 +193,7 @@ class DepartamentoPDO {
       * 
       * @return Array devuelve el array con todos los departamentos
      */
-    public static function buscaDepartamentosPorEstado($descDepartamento = '', $sEstado = 0, $iPagina = 0) {
+    public static function buscaDepartamentosPorDescripcionPorEstadoPaginado($descDepartamento = '', $sEstado = 0, $iPagina = 0) {
         /*
          * Variable para determinar desde qué registro empezar a obtener resultados en la consulta SQL.
          * Cada vez que se pasa a una nueva página, se multiplica el número de página por 4 

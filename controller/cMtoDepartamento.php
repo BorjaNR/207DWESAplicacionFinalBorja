@@ -79,7 +79,7 @@ if (isset($_REQUEST['rehabilitar'])) {
  * Por medio del método 'buscaDepartamentosTotales' de la clase 'DepartamentoPDO' cuento todos los Departamentos 
  * que le pido según los parametros y los almaceno en una variable.
  * 
- * Divido por 5 para obtener el número total de páginas, ya que cada página tiene 5 resultados.
+ * Divido por 4 para obtener el número total de páginas, ya que cada página tiene 4 resultados.
  */
 $iDepartamentosTotales = DepartamentoPDO::buscaDepartamentosTotales($_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado']) / 5;
 
@@ -177,7 +177,7 @@ $numeroDeRegistrosConsulta = 0;
  * Le restamos 1 a la variable de '$_SESSION['numPaginacionDepartamentos']' para indicar el indice 0 de la paginación y que así nos muestre los 4 primeros resultado,
  * si no hicieramos esto nos mostraría a partir de los 5 siguiente, porque es lo que le indico en el método.
  */
-$aDepartamentosBuscados = DepartamentoPDO::buscaDepartamentosPorEstado($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado'], $_SESSION['numPaginacionDepartamentos']-1); 
+$aDepartamentosBuscados = DepartamentoPDO::buscaDepartamentosPorDescripcionPorEstadoPaginado($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado'], $_SESSION['numPaginacionDepartamentos']-1); 
 // Ejecutando la declaración SQL
 if ($aDepartamentosBuscados) {
     //Recorro el objeto del resultado que contiene un array
