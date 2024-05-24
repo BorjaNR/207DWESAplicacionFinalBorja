@@ -33,6 +33,7 @@ var menudata={children:[
 {text:"Jerarquía de clases",url:"inherits.html"},
 {text:"Campos de datos",url:"functions.html",children:[
 {text:"Todos",url:"functions.html",children:[
+{text:"$",url:"functions.html#index__24"},
 {text:"_",url:"functions.html#index__5F"},
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},

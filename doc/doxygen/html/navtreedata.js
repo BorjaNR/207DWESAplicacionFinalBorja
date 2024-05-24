@@ -58,7 +58,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"231018libreria_validacion_8php.html"
+"231018libreria_validacion_8php.html",
+"v_alta_departamento_8php.html#a4a86337f0bf55600df9c8f71b9d298a7"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

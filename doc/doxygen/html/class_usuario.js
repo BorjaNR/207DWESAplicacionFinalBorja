@@ -14,5 +14,12 @@ var class_usuario =
     [ "setFechaHoraUltimaConexionAnterior", "class_usuario.html#ae7fc52a083387dbd251de050b66ddde4", null ],
     [ "setNumAcceso", "class_usuario.html#af056c2beeb18852d207f039d515df1dc", null ],
     [ "setPassword", "class_usuario.html#a3e35c8d3dbb2c513c618a664389e0926", null ],
-    [ "setPerfil", "class_usuario.html#a00bcf66571b2dd506829e45c6401feed", null ]
+    [ "setPerfil", "class_usuario.html#a00bcf66571b2dd506829e45c6401feed", null ],
+    [ "$codUsuario", "class_usuario.html#a128d2cdcace850d9c61238f00c660bc6", null ],
+    [ "$descUsuario", "class_usuario.html#ac077249f5727727e9c890fd6556f7ffe", null ],
+    [ "$fechaHoraUltimaConexion", "class_usuario.html#ab508b0776c849059a28d6d63a6af8cef", null ],
+    [ "$fechaHoraUltimaConexionAnterior", "class_usuario.html#ab2bf5c21d64f9a4eb57d127b1bde2007", null ],
+    [ "$numAcceso", "class_usuario.html#a585fefcba2b91a21513a6926e4aa3e19", null ],
+    [ "$password", "class_usuario.html#a607686ef9f99ea7c42f4f3dd3dbb2b0d", null ],
+    [ "$perfil", "class_usuario.html#a1a8ae81eb5f167bf34674fc3f5427e87", null ]
 ];

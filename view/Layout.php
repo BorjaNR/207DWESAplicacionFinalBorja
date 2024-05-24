@@ -27,10 +27,13 @@
                         <p>&copy;2023-24 IES los Sauces. Todos los derechos reservados. <a href="../index.html" style="text-decoration: none; background-color: transparent; color: white">Borja Nuñez Refoyo</a></p>
                     </div>
                     <div class="col text-center">
-                        <p><a href="./doc/doxygen/html/index.html" style="text-decoration: none; background-color: transparent; color: white">Documentacion</a></p>
+                        <p><a href="./doc/doxygen/html/index.html" style="text-decoration: none; background-color: transparent; color: white" target="blank">Documentacion</a></p>
+                    </div>
+                    <div class="col text-center">
+                        <p><a href="../207DWESProyectoDWES/doc/EstudioTema2Borja.pdf" style="text-decoration: none; background-color: transparent; color: white;" target="blank">Tecnologias</a></p>
                     </div>
                     <div class="col text-end">
-                        <a title="GitHub" href="https://github.com/BorjaNR/207DWESAplicacionFinalBorja" target="blank"><img src="./webroot/images/git.png" width="40" height="40" alt="GitHub"/></a>
+                        <a title="GitHub" href="https://github.com/BorjaNR/207DWESAplicacionFinalBorja" target=><img src="./webroot/images/git.png" width="40" height="40" alt="GitHub"/></a>
                     </div>
                 </div>
             </div>
