@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "DWESAplicacionFinalBorja", "index.html", [
+  [ "AplicacionFinalBorja", "index.html", [
     [ "Proyecto DWES Aplicacion final", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html", [
       [ "Autor", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "Requisitos", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html#autotoc_md2", null ],
@@ -32,19 +32,6 @@ var NAVTREE =
       [ "Funcionalidades", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html#autotoc_md4", null ],
       [ "Entorno de desarrollo", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html#autotoc_md5", null ],
       [ "Entorno de explotacion", "md__d_1_2_proyectos_n_b_2207_d_w_e_s_aplicacion_final_borja_2_r_e_a_d_m_e.html#autotoc_md6", null ]
-    ] ],
-    [ "Espacios de nombres", "namespaces.html", [
-      [ "Lista de espacios de nombres", "namespaces.html", "namespaces_dup" ]
-    ] ],
-    [ "Estructuras de datos", "annotated.html", [
-      [ "Estructuras de datos", "annotated.html", "annotated_dup" ],
-      [ "Índice de estructuras de datos", "classes.html", null ],
-      [ "Jerarquía de clases", "hierarchy.html", "hierarchy" ],
-      [ "Campos de datos", "functions.html", [
-        [ "Todos", "functions.html", null ],
-        [ "Funciones", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
     ] ],
     [ "Archivos", "files.html", [
       [ "Lista de archivos", "files.html", "files_dup" ],
@@ -58,7 +45,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"231018libreria_validacion_8php.html"
+"dir_4442b386d8f30281c1f8f8d008c5a690.html"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';
