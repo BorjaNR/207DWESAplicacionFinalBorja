@@ -27,7 +27,7 @@
                         <p>&copy;2023-24 IES los Sauces. Todos los derechos reservados. <a href="../index.html" style="text-decoration: none; background-color: transparent; color: white">Borja Nuñez Refoyo</a></p>
                     </div>
                     <div class="col text-center">
-                        <p><a href="./doc/index.html" style="text-decoration: none; background-color: transparent; color: white; margin-right: 10px;">PhpDocumentator</a></p>
+                        <p><a href="./doc/phpDocumentator/index.html" style="text-decoration: none; background-color: transparent; color: white; margin-right: 10px;">PhpDocumentator</a></p>
                         <p><a href="./doc/doxygen/html/index.html" style="text-decoration: none; background-color: transparent; color: white">Doxygen</a></p>
                     </div>
                     <div class="col text-end">
