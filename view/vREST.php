@@ -119,4 +119,20 @@
             </fieldset>
         </form>
     </div>
+    <div>
+        <form name="formulario1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <fieldset class=" nasa">
+                <legend>
+                    <h2>Buscar Departamento</h2>
+                </legend>
+                <input type="text" name="codDepartamento">
+                <input type="submit" value="Aceptar" name="departamento">
+                <hr>
+                <p><b>Titulo de la Imagen:</b></p>
+                <p style="margin-top: 20px;"><span style="font-weight: bold;">URL</span></p>
+                <p><span style="font-weight: bold;">Parametros:</span> Fecha</p>
+                <p><span style="font-weight: bold;">Metodo:</span> GET</p>
+            </fieldset>
+        </form>
+    </div>
 </div>

@@ -61,14 +61,14 @@ class REST{
     public static function apiDepartamentos($param) {
         try{
            // obtenemos el resultado del servidor del api rest
-            $resultado = file_get_contents();
+            $resultado = file_get_contents("https://daw207.ieslossauces.es/207DWESAplicacionFinalBorja/api/buscarDepartamentoPorCodigo.php");
             
             // Devolvemos el array devuelto por json_decode
             $archivoApi = json_decode($resultado, true);
             
             if (isset($archivoApi)){
-                $prediccionAemet = new PrediccionAemet($archivoApi['datos']);
-                return $prediccionAemet;
+                $departamento = new Departamento($archivoApi['CodDepartamento'],$archivoApi['DescDepartamento'],$archivoApi['FechaCreacion'],$archivoApi['Volumen'],$archivoApi['FechaBaja']);
+                return $departamento;
             }else{
                 return null;
             } 
