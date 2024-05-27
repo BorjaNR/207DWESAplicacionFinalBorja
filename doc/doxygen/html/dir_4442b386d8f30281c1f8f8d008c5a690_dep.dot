@@ -1,0 +1,12 @@
+digraph "D:/ProyectosNB/207DWESAplicacionFinalBorja"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_ba4d2f79aed1221873120bc7786b9082 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="ProyectosNB", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_ba4d2f79aed1221873120bc7786b9082.html",tooltip=""]
+  dir_4442b386d8f30281c1f8f8d008c5a690 [label="207DWESAplicacionFinalBorja", fillcolor="#edf0f7", color="grey25", style="filled,bold", URL="dir_4442b386d8f30281c1f8f8d008c5a690.html",tooltip=""];
+  }
+}

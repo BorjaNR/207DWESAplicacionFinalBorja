@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['buscadepartamentospordesc_0',['buscaDepartamentosPorDesc',['../class_departamento_p_d_o.html#a5f2ebc356b5970479965b4768bd7b2ad',1,'DepartamentoPDO']]],
-  ['buscardepartamentoporcodigo_2ephp_1',['buscarDepartamentoPorCodigo.php',['../buscar_departamento_por_codigo_8php.html',1,'']]]
+  ['if_0',['if',['../index_aplicacion_final_8php.html#a5d874fd43217f0f3eceee5f3a85ff7e9',1,'indexAplicacionFinal.php']]],
+  ['indexaplicacionfinal_2ephp_1',['indexAplicacionFinal.php',['../index_aplicacion_final_8php.html',1,'']]]
 ];

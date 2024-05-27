@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DWESAplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/indexAplicacionFinal.php</title>
+<title>AplicacionFinalBorja: Archivo de código fuente D:/ProyectosNB/207DWESAplicacionFinalBorja/indexAplicacionFinal.php</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">DWESAplicacionFinalBorja
+   <div id="projectname">AplicacionFinalBorja
    </div>
   </td>
  </tr>
@@ -109,15 +109,13 @@ $(function(){initNavTree('index_aplicacion_final_8php_source.html',''); initResi
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>session_start();</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Comprueba si hay una pagina activa</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="index_aplicacion_final_8php.html#a5d874fd43217f0f3eceee5f3a85ff7e9">   16</a></span><span class="keywordflow">if</span> (!isset(<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>])) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="index_aplicacion_final_8php.html#a5d874fd43217f0f3eceee5f3a85ff7e9">   16</a></span><span class="keywordflow">if</span> (!isset($_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>])) {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//Asigna como pagina activa inicioPublico</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>] = <span class="stringliteral">&#39;inicioPublico&#39;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    $_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>] = <span class="stringliteral">&#39;inicioPublico&#39;</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// Carga la pagina en curso</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>require_once <a class="code hl_variable" href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a>[<a class="code hl_variable" href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a>[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]];</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>require_once $controller[$_SESSION[<span class="stringliteral">&#39;paginaEnCurso&#39;</span>]];</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="ttc" id="ac_baja_logica_departamento_8php_html_a4bb3b9d4d87cb0da58f9db7e65f69ef7"><div class="ttname"><a href="c_baja_logica_departamento_8php.html#a4bb3b9d4d87cb0da58f9db7e65f69ef7">$_SESSION</a></div><div class="ttdeci">if(is_null($oDepartamentoSeleccionado-&gt;getFechaBajaDepartamento())) $_SESSION['paginaEnCurso']</div><div class="ttdef"><b>Definition</b> <a href="c_baja_logica_departamento_8php_source.html#l00019">cBajaLogicaDepartamento.php:19</a></div></div>
-<div class="ttc" id="aconf_a_p_p_8php_html_a388ef7b1db5e6f728e63cee704ce6e23"><div class="ttname"><a href="conf_a_p_p_8php.html#a388ef7b1db5e6f728e63cee704ce6e23">$controller</a></div><div class="ttdeci">$controller</div><div class="ttdef"><b>Definition</b> <a href="conf_a_p_p_8php_source.html#l00020">confAPP.php:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
