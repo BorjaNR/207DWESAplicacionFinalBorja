@@ -21,6 +21,7 @@ if (isset($_REQUEST['volver'])) {
 $aVistaRest = [
     'nasa' => [],
     'AEMET' => '',
+    'departamento' => []
 ];
 
 $_SESSION['nasaFechaEnCurso'] = date("Y-m-d");
@@ -36,17 +37,30 @@ $oFotoNasaEnCurso = REST::apiNasa($_SESSION['nasaFechaEnCurso']);
 $aVistaRest['nasa']['titulo'] = $oFotoNasaEnCurso->getTitulo();
 $aVistaRest['nasa']['foto'] = $oFotoNasaEnCurso->getFoto();
 
-/*if (isset($_SESSION['nasaFechaEnCurso'])) {
-    
-}
-*/
 $_SESSION['AEMETProvinciaEnCurso'] = '49';
 
-//Guardamos en sesion la provincia
+//Guardamos en sesion el codigo departamento
 if (isset($_REQUEST['provincia'])) {
     $_SESSION['AEMETProvinciaEnCurso'] = $_REQUEST['provincia'];
 }
 $oProvinciaEnCurso = REST::apiAemet($_SESSION['AEMETProvinciaEnCurso']);
 $aVistaRest['AEMET'] = $oProvinciaEnCurso->getPrediccion();
+
+$_SESSION['DepartamentoEnCurso'] = 'AAA';
+
+//Guardamos en sesion la provincia
+if (isset($_REQUEST['codDepartamento'])) {
+    $_SESSION['DepartamentoEnCurso'] = $_REQUEST['codDepartamento'];
+}
+
+$oDepartamentoEnCurso = REST::apiBuscaDepartamentoPorCodigo($_SESSION['DepartamentoEnCurso']);
+        
+if(is_object($oDepartamentoEnCurso) && !is_null($oDepartamentoEnCurso)){
+    $aVistaRest['departamento']['codDep'] = $oDepartamentoEnCurso->getCodDepartamento();
+    $aVistaRest['departamento']['descDep'] = $oDepartamentoEnCurso->getDescDepartamento();
+    $aVistaRest['departamento']['fechCreacion'] = $oDepartamentoEnCurso->getFechaCreacionDepartamento();
+    $aVistaRest['departamento']['volumen'] = $oDepartamentoEnCurso->getVolumenDeNegocio();
+    $aVistaRest['departamento']['fechaBaja'] = $oDepartamentoEnCurso->getFechaBajaDepartamento();
+}
 
 require_once $view['layout'];

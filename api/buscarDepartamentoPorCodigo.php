@@ -6,11 +6,11 @@
  * @since 14/05/2024
  */
 
-require_once 'config/confDBPDO.php';
-require_once 'model/DB.php';
-require_once 'model/DBPDO.php';
-require_once 'model/Departamento.php';
-require_once 'model/DepartamentoPDO.php';
+require_once '../config/confDBPDO.php';
+require_once '../model/DB.php';
+require_once '../model/DBPDO.php';
+require_once '../model/Departamento.php';
+require_once '../model/DepartamentoPDO.php';
 
 //Creamos e inicializamos las variables imprescindibles para este ejercicio
 $entradaOK = true; //Variable que nos indica que todo va bien
@@ -27,7 +27,7 @@ if (isset($_REQUEST['codDepartamento'])) {
     * Recuperamos el código del departamento seleccionado anteriormente por medio de una variable de sesión
     * Y usando el metodo 'buscaDepartamentoPorCod' de la clase 'DepartamentoPDO' recuperamos el objeto completo
     */
-    $oDepartamento = DepartamentoPDO::buscaDepartamentoPorCod($_SESSION['codDepartamento']);
+    $oDepartamento = DepartamentoPDO::buscaDepartamentoPorCod($_REQUEST['codDepartamento']);
     
     if($oDepartamento){
         $aDepartamento = [
