@@ -1,4 +1,4 @@
 var _d_b_p_d_o_8php =
 [
-    [ "DBPDO", "class_d_b_p_d_o.html", null ]
+    [ "DBPDO", "class_d_b_p_d_o.html", "class_d_b_p_d_o" ]
 ];

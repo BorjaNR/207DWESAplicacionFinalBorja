@@ -21,7 +21,7 @@ class REST{
             
             //Compruebo que existe o no esta vacio el archivo y si no lo esta devuelvo un objeto y si no null
             if (isset($archivoApi)){
-                $fotoNasa = new FotoNasa($archivoApi['title'], $archivoApi['hdurl']);
+                $fotoNasa = new FotoNasa($archivoApi['title'], $archivoApi['url']);
                 return $fotoNasa;
             }else{
                 return null;
@@ -58,20 +58,25 @@ class REST{
         }
     }
     
-    public static function apiDepartamentos($param) {
+    public static function apiBuscaDepartamentoPorCodigo($codDepartamentoEnCurso) {
         try{
            // obtenemos el resultado del servidor del api rest
-            $resultado = file_get_contents();
+            $resultado = file_get_contents("http://daw207.isauces.local/207DWESAplicacionFinalBorja/api/buscarDepartamentoPorCodigo.php/?codDepartamento=".$codDepartamentoEnCurso);
             
             // Devolvemos el array devuelto por json_decode
             $archivoApi = json_decode($resultado, true);
             
+            $resultado = null;
             if (isset($archivoApi)){
-                $prediccionAemet = new PrediccionAemet($archivoApi['datos']);
-                return $prediccionAemet;
-            }else{
-                return null;
-            } 
+                if(!array_key_exists('codigo', $archivoApi)){
+                    $resultado = new Departamento($archivoApi['CodDepartamento'],$archivoApi['DescDepartamento'],$archivoApi['FechaCreacion'],$archivoApi['Volumen'],$archivoApi['FechaBaja']);
+                }else{
+                   $aResultadoApiDepartamento['codigo'] = $archivoApi['codigo'];
+                   $aResultadoApiDepartamento['error'] = $archivoApi['mensaje'];
+                   $resultado = $aResultadoApiDepartamento;
+                }
+            }
+            return $resultado;
         } catch (Exception $excepcion) {
             $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
             $_SESSION['paginaEnCurso'] = 'error';

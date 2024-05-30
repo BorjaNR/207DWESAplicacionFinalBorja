@@ -17,34 +17,29 @@
  * @since 06/05/2024
  */
 class Departamento {
-
     /**
-     * Código de Departamento
-     * @var string
+     * @var string $codDepartamento Codigo de departamento
      */
     private $codDepartamento;
-
+    
     /**
-     * Descripción de Departamento
-     * @var string
+     * @var string $descDepartamento Descripcion departamento
      */
     private $descDepartamento;
-
+    
     /**
-     * Fecha de Creación de Departamento
-     * @var DateTime
+     * @var DateTime $fechaCreacionDepartamento Fecha de creacion del departamento
      */
     private $fechaCreacionDepartamento;
-
+    
     /**
-     * Volumen de Negocio
-     * @var double
+     * @var double $volumenDeNegocio Volumeno de negocio
      */
     private $volumenDeNegocio;
-
+    
     /**
-     * Fecha de Baja de Departamento
-     * @var DateTime
+     * 
+     * @var DateTime $fechaBajaDepartamento Fecha de baja del departamento
      */
     private $fechaBajaDepartamento;
 

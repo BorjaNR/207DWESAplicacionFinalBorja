@@ -162,7 +162,7 @@ $(function(){initNavTree('_r_e_s_t_8php_source.html',''); initResizable(true); }
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_r_e_s_t.html#a59ae0b54ce1bf7b8f1a08814574daf10">   61</a></span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">function</span> <a class="code hl_function" href="class_r_e_s_t.html#a59ae0b54ce1bf7b8f1a08814574daf10">apiDepartamentos</a>($param) {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">try</span>{</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>           <span class="comment">// obtenemos el resultado del servidor del api rest</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            $resultado = file_get_contents(<span class="stringliteral">&quot;https://opendata.aemet.es/opendata/api/prediccion/provincia/hoy/{$provincia}/?api_key=&quot;</span> . self::apikeyAEMET);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            $resultado = file_get_contents();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment">// Devolvemos el array devuelto por json_decode</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            $archivoApi = json_decode($resultado, <span class="keyword">true</span>);</div>

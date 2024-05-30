@@ -119,4 +119,22 @@
             </fieldset>
         </form>
     </div>
+    <div>
+        <form name="formulario1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <fieldset class=" nasa">
+                <legend>
+                    <h2>Buscar Departamento</h2>
+                </legend>
+                <input type="text" maxlength="3"  name="codDepartamento" value="<?php echo isset($_SESSION['DepartamentoEnCurso']) ? $_SESSION['DepartamentoEnCurso'] : 'AAA' ?>">
+                <input type="submit" value="Buscar" name="departamento">
+                <span style="color: #cc0000;" <?php echo isset($aVistaRest['departamento']['codigo']) ? $aVistaRest['departamento']['codigo'] : '';?>></span>
+                <hr>
+                <p><span style="font-weight: bold;">Codigo Departamento:</span><?php echo isset($aVistaRest['departamento']['codDep']) ? $aVistaRest['departamento']['codDep'] : ''; ?></p>
+                <p><span style="font-weight: bold;">Descripcion del departamento:</span><?php echo isset($aVistaRest['departamento']['descDep']) ? $aVistaRest['departamento']['descDep'] : ''; ?></p>
+                <p><span style="font-weight: bold;">Fecha de Creación:</span><?php echo isset($aVistaRest['departamento']['descDep']) ? $aVistaRest['departamento']['descDep'] : ''; ?></p>
+                <p><span style="font-weight: bold;">Volumen de Negocio:</span><?php echo isset($aVistaRest['departamento']['volumen']) ? $aVistaRest['departamento']['volumen'] : ''; ?></p>
+                <p><span style="font-weight: bold;">Fecha de Baja:</span><?php echo isset($aVistaRest['departamento']['fechaBaja']) ? $aVistaRest['departamento']['fechaBaja'] : ''?></p>
+            </fieldset>
+        </form>
+    </div>
 </div>

@@ -51,12 +51,56 @@ if (isset($_REQUEST['bajaLogica'])) {
     exit;
 }
 
+// Si la variable no esta declarada le asigno un valor por defecto
+if (!isset($_SESSION['numPaginacionDepartamentos'])) {
+    $_SESSION['numPaginacionDepartamentos'] = 1;
+}
+
+define("ESTADO_TODOS", 0);
+define("ESTADO_ALTAS", 1);
+define("ESTADO_BAJAS", 2);
+
+// Si la variable no esta declarada le asigno un valor por defecto
+if (!isset($_SESSION['criterioBusquedaDepartamentos']['estado'])) {
+    $_SESSION['criterioBusquedaDepartamentos']['estado'] = ESTADO_TODOS;
+}
+
+
 // Estructura del botón rehabilitar Departamento, si el usuario pulsa el botón de añadir departamento
 if (isset($_REQUEST['rehabilitar'])) {
     $_SESSION['codDepartamentoActual'] = $_REQUEST['rehabilitar']; // Almaceno en una variable de sesión el Codigo del Departamento Seleccionado
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'rehabilitacion';
     header('Location: indexAplicacionFinal.php'); // Redirecciono al index de la APP
+    exit;
+}
+
+/*
+ * Por medio del método 'buscaDepartamentosTotales' de la clase 'DepartamentoPDO' cuento todos los Departamentos 
+ * que le pido según los parametros y los almaceno en una variable.
+ * 
+ * Divido por 4 para obtener el número total de páginas, ya que cada página tiene 4 resultados.
+ */
+$iDepartamentosTotales = DepartamentoPDO::buscaDepartamentosTotales($_SESSION['criterioBusquedaDepartamentos']['descripcionBuscada'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado']) / 5;
+
+if(isset($_REQUEST['paginaPrimera'])){ //Si el usuario pulsa el boton de paginaPrimera
+    $_SESSION['numPaginacionDepartamentos'] = 1; //Le situo en la primera pagina
+    header('Location: indexAplicacionFinal.php');
+    exit;
+}
+if(isset($_REQUEST['paginaAnterior']) && $_SESSION['numPaginacionDepartamentos'] >= 2){ //Si el usuario pulsa el boton de paginaAnterior
+    $_SESSION['numPaginacionDepartamentos']--; //Le situo una pagina mas atras
+    header('Location: indexAplicacionFinal.php');
+    exit;
+}
+if(isset($_REQUEST['paginaSiguiente']) && $_SESSION['numPaginacionDepartamentos'] < $iDepartamentosTotales){ //Si el usuario pulsa el boton de paginaSiguiente
+    $_SESSION['numPaginacionDepartamentos']++; //Le situo una pagina mas adelante
+    header('Location: indexAplicacionFinal.php');
+    exit;
+}
+if(isset($_REQUEST['paginaUltima'])){ //Si el usuario pulsa el boton de paginaUltima
+    $_SESSION['numPaginacionDepartamentos'] = ceil($iDepartamentosTotales); // Redondeo hacia arriba el número
+    header('Location: indexAplicacionFinal.php');
     exit;
 }
 
@@ -88,7 +132,30 @@ if (isset($_REQUEST['enviar'])) {
 }
 if ($entradaOK) {
     $_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] = $_REQUEST['DescDepartamento'];
+    
+    switch ($_REQUEST['estado']){ //Guardo el estado que ha seleccionado el usuario en el filtrado de la busqueda
+        case 'todos':
+            $sEstado = ESTADO_TODOS;
+            break;
+        case 'altas':
+            $sEstado = ESTADO_ALTAS;
+            break;
+        case 'bajas':
+            $sEstado = ESTADO_BAJAS;
+            break;
+    }
+    // El valor de $sEstado son una constantes que valen (0-1-2)
+    $_SESSION['numPaginacionDepartamentos'] = 1;
+    $_SESSION['criterioBusquedaDepartamentos']['estado'] = $sEstado; // Guardo el valor del estado en la sesión
 }
+
+/*
+ * Por medio del método 'buscaDepartamentosTotales' de la clase 'DepartamentoPDO' cuento todos los Departamentos 
+ * que le pido según los parametros y los almaceno en una variable.
+ * 
+ * Divido por 5 para obtener el número total de páginas, ya que cada página tiene 4 resultados.
+ */
+$iDepartamentosTotales = DepartamentoPDO::buscaDepartamentosTotales($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado']) / 5;
 
 //Array para guardar el contenido de un departamento
 $aDepartamentoVista = [];
@@ -100,12 +167,19 @@ $numeroDeRegistrosConsulta = 0;
  * Inicializamos el arrayDepartamentos buscados llamando al metodo buscaDepartamtosPorDesc de la clase DepartamentoPDO
  * Este metodo Realiza una consulta filtrando por descripcion de deparamentos y devuleve su resultado
  */
-$aDepartamentosBuscados = DepartamentoPDO::buscaDepartamentosPorDesc($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '');
+//$aDepartamentosBuscados = DepartamentoPDO::buscaDepartamentosPorDesc($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '');
 
-
+/*
+ * Por medio del método 'buscaDepartamentosPorEstado' de la clase 'DepartamentoPDO' busco todos los Departamentos
+ * con los siguientes parametros. 
+ * La descripción si esta declarada si no vacío, el estado esta declarado por defecto y el número de paginación también.
+ * 
+ * Le restamos 1 a la variable de '$_SESSION['numPaginacionDepartamentos']' para indicar el indice 0 de la paginación y que así nos muestre los 4 primeros resultado,
+ * si no hicieramos esto nos mostraría a partir de los 5 siguiente, porque es lo que le indico en el método.
+ */
+$aDepartamentosBuscados = DepartamentoPDO::buscaDepartamentosPorDescripcionPorEstadoPaginado($_SESSION['criterioBusquedaDepartamentos']['descDepartamento'] ?? '', $_SESSION['criterioBusquedaDepartamentos']['estado'], $_SESSION['numPaginacionDepartamentos']-1); 
 // Ejecutando la declaración SQL
 if ($aDepartamentosBuscados) {
-
     //Recorro el objeto del resultado que contiene un array
     foreach ($aDepartamentosBuscados as $aDepartamento) {
 
