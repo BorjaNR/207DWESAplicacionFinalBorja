@@ -15,7 +15,7 @@ if (is_null($avInicioPrivado['ultimaConexionAnterior'])) {
     echo 'Te conectaste por última vez ' . $avInicioPrivado['ultimaConexionAnterior'] . '</p>';
 }
 ?>
-<div class="row mb-5">
+<div class="row mb-5 position-absolute top-75 start-40" style="display: block; width: 50%;margin-left: 500px">
     <div class="col text-center">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -25,8 +25,8 @@ if (is_null($avInicioPrivado['ultimaConexionAnterior'])) {
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/DiagramaDeCasosDeUso.jpg" target="_blank">
-                        <img src="webroot/imagenes/DiagramaDeCasosDeUso.jpg" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/ConstructionImage.jpg" target="_blank">
+                        <img src="webroot/images/ConstructionImage.jpg" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
