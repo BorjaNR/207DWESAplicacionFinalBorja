@@ -61,7 +61,7 @@ class REST{
     public static function apiBuscaDepartamentoPorCodigo($codDepartamentoEnCurso) {
         try{
            // obtenemos el resultado del servidor del api rest
-            $resultado = file_get_contents("http://daw207.isauces.local/207DWESAplicacionFinalBorja/api/buscarDepartamentoPorCodigo.php/?codDepartamento=".$codDepartamentoEnCurso);
+            $resultado = file_get_contents("https://daw207.ieslossauces.es/207DWESAplicacionFinalBorja/api/buscarDepartamentoPorCodigo.php/?codDepartamento=".$codDepartamentoEnCurso);
             
             // Devolvemos el array devuelto por json_decode
             $archivoApi = json_decode($resultado, true);

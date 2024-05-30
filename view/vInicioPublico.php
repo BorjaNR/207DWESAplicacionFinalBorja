@@ -5,7 +5,7 @@
  * @since 03/05/2024
  */
 ?>
-<h1 class="text-secondary">Inicio Publico</h1>
+<h1 class="text-secondary">Inicio publico</h1>
 <div class="row mb-5">
     <div class="col text-center">
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
