@@ -6,7 +6,7 @@
  * @since 03/05/2024
  */
 //Si se intenta acceder a la pagina sin iniciar sesion redirige a la pagina de inicio de la aplicación
-if (empty($_SESSION['user207AplicacionFinal'])) {
+if (empty($_SESSION['usuarioMiAplicacion'])) {
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     // Redirige a la página de inicio
     $_SESSION['paginaEnCurso'] = 'inicioPublico';
@@ -39,7 +39,7 @@ if (isset($_REQUEST['mto_departamentos'])) {
 // Ir a Mi Cuenta
 if (isset($_REQUEST['mi_cuenta'])) {
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
-    $_SESSION['paginaEnCurso'] = 'wip';
+    $_SESSION['paginaEnCurso'] = 'mi_cuenta';
     header('Location: indexAplicacionFinal.php');
     exit();
 }
@@ -61,9 +61,9 @@ if (isset($_REQUEST['rest'])) {
 
 //Construimos un array con los datos que necesita la vista
 $avInicioPrivado = [
-    'descUsuario' =>  $_SESSION['user207AplicacionFinal']->getdescUsuario(),
-    'numConexiones' => $_SESSION['user207AplicacionFinal']->getnumAcceso(),
-    'ultimaConexionAnterior' => $_SESSION['user207AplicacionFinal']->getfechaHoraUltimaConexionAnterior()
+    'descUsuario' =>  $_SESSION['usuarioMiAplicacion']->getdescUsuario(),
+    'numConexiones' => $_SESSION['usuarioMiAplicacion']->getnumAcceso(),
+    'ultimaConexionAnterior' => $_SESSION['usuarioMiAplicacion']->getfechaHoraUltimaConexionAnterior()
 ];
 
 require_once $view['layout'];

@@ -31,7 +31,8 @@ $controller = [
     'eliminarDepartamento' => 'controller/cEliminarDepartamento.php',
     'añadirDepartamento' => 'controller/cAltaDepartamento.php',
     'bajaLogica' => 'controller/cBajaLogicaDepartamento.php',
-    'rehabilitacion' => 'controller/cRehabilitacionDepartamento.php'
+    'rehabilitacion' => 'controller/cRehabilitacionDepartamento.php',
+    'mi_cuenta' => 'controller/cMiCuenta.php'
 ];
 
 $view = [
@@ -47,5 +48,6 @@ $view = [
     'mto_departamento' => 'view/vMtoDepartamento.php',
     'editarDepartamento' => 'view/vConsultarModificarDepartamento.php',
     'eliminarDepartamento' => 'view/vEliminarDepartamento.php',
-    'añadirDepartamento' => 'view/vAltaDepartamento.php'
+    'añadirDepartamento' => 'view/vAltaDepartamento.php',
+    'mi_cuenta' => 'view/vMiCuenta.php'
 ];

@@ -2,66 +2,48 @@
 
 /**
  * @author Borja Nuñez Refoyo
- * @version 2.0 
- * @since 28/05/2024
+ * @version 3.0
+ * @since 30/05/2024
  */
-//Comprobamos si pulsa el boton volver
+// Redirige a inicioPrivado
 if (isset($_REQUEST['cancelar'])) {
-    // Redirige a la página de inicio
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    header('Location: indexAplicacionFinal.php'); 
+    header('Location: indexAplicacionFinal.php');
     exit();
 }
 
-//Creamos e inicializamos las variables imprescindibles para este ejercicio
-$entradaOK = true; //Variable que nos indica que todo va bien
-//Array donde recogemos los mensajes de error
-$aErrores = [
-    'T02_DescDepartamento' => '',
-    'T02_VolumenDeNegocio' => ''
-    ];
 
-/*
- * Recuperamos el código del departamento seleccionado anteriormente por medio de una variable de sesión
- * Y usando el metodo 'buscaDepartamentoPorCod' de la clase 'DepartamentoPDO' recuperamos el objeto completo
- */
-$oDepartamentoSeleccionado = DepartamentoPDO::buscaDepartamentoPorCod($_SESSION['codDepartamentoActual']);
+$avMiCuenta = [
+    'codUsuario' => $_SESSION['usuarioMiAplicacion']->getcodUsuario(),
+    'contraseña' => $_SESSION['usuarioMiAplicacion']->getpassword(),
+    'descUsuario' => $_SESSION['usuarioMiAplicacion']->getdescUsuario(),
+    'nConexiones' => $_SESSION['usuarioMiAplicacion']->getnumAcceso(),
+    'fechaHoraUltimaConexionAnterior' => $_SESSION['usuarioMiAplicacion']->getfechaHoraUltimaConexionAnterior()
+];
 
-//Cargar valores por defecto en los campos del formulario
-//Para cada campo del formulario: Validar entrada y actuar en consecuencia
+$aErrores['descUsuario'] = "";
+$entradaOK = true;
+// Guarda los cambios realizados y envia a inicioPrivado
 if (isset($_REQUEST['enviar'])) {
-    //Valido la entrada de descripcion departamento
-    $aErrores = [
-        'T02_DescDepartamento' => validacionFormularios::comprobarAlfabetico($_REQUEST['T02_DescDepartamento'], 255, 1, 1),
-        'T02_VolumenDeNegocio' => validacionFormularios::comprobarFloat($_REQUEST['T02_VolumenDeNegocio'], PHP_FLOAT_MAX, PHP_FLOAT_MIN, 1)
-    ];
-    // Recorre aErrores para ver si hay alguno
-    foreach ($aErrores as $campo => $valor) {
-        if ($valor != null) {
+    if ($_REQUEST['descUsuario'] != $avMiCuenta['descUsuario']) {
+        $aErrores['descUsuario'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descUsuario'], 255, 3, 1);
+    } else {
+        $aErrores['descUsuario'] = "Este usuario ya tiene esta descripcion";
+    }
+    foreach ($aErrores as $campo => $error) {
+        if ($error != null) {
             $entradaOK = false;
-            // Limpiamos el campo
-            $_REQUEST[$campo] = '';
+            $_REQUEST[$campo] = "";
         }
     }
-} else {
-    $entradaOK = false;
-}
-if ($entradaOK) {
-    //modificamos el departamento con el metodo modificar
-    DepartamentoPDO::modificaDepartamento($_SESSION['codDepartamentoActual'], $_REQUEST['T02_DescDepartamento'], $_REQUEST['T02_VolumenDeNegocio']);
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    $_SESSION['paginaAnterior'] = '';
-    header('Location: indexAplicacionFinal.php'); 
-}
 
-// Almaceno la información del departamento actual en este array, para mostrarlas en el formulario
-if ($oDepartamentoSeleccionado) {
-    $avConsultarModificarDepartamento = [
-        'codDepartamento' => $oDepartamentoSeleccionado->getCodDepartamento(),
-        'descDepartamento' => $oDepartamentoSeleccionado->getDescDepartamento(),
-        'fechaCreacion' => $oDepartamentoSeleccionado->getFechaCreacionDepartamento(),
-        'volumen' => $oDepartamentoSeleccionado->getVolumenDeNegocio()
-    ];
+    if ($entradaOK) {
+        $_SESSION['usuarioMiAplicacion'] = UsuarioPDO::modificarUsuario($_SESSION['usuarioMiAplicacion'], $_REQUEST['descUsuario']);
+        //Redireccionamos a el inicio privado
+        $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+        header('Location: indexAplicacionFinal.php');
+        exit();
+    }
 }
 
 require_once $view['layout'];

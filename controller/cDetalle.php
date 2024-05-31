@@ -5,7 +5,7 @@
  * @since 03/05/2024
  */
 //Si se intenta acceder a la pagina sin iniciar sesion redirige a la pagina de inicio de la aplicación
-if (empty($_SESSION['user207AplicacionFinal'])) {
+if (empty($_SESSION['usuarioMiAplicacion'])) {
     // Redirige a la página de inicio
     $_SESSION['paginaEnCurso'] = 'inicioPublico';
     header('Location: indexAplicacionFinal.php');

@@ -16,33 +16,33 @@
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/DiagramaDeCasosDeUso.jpg" target="_blank">
-                        <img src="webroot/imagenes/DiagramaDeCasosDeUso.jpg" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/DiagramaDeCasosDeUso.PNG" target="_blank">
+                        <img src="webroot/images/DiagramaDeCasosDeUso.PNG" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/sesion.PNG" target="_blank">
-                        <img src="webroot/imagenes/sesion.PNG" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/catalogoRequisitos.png" target="_blank">
+                        <img src="webroot/images/catalogoRequisitos.png" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/archivos.PNG" target="_blank">
-                        <img src="webroot/imagenes/archivos.PNG" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/relacionFicheros.png" target="_blank">
+                        <img src="webroot/images/relacionFicheros.png" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/ficheros.png" target="_blank">
-                        <img src="webroot/imagenes/ficheros.png" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/estructuraAlmacenamiento.PNG" target="_blank">
+                        <img src="webroot/images/estructuraAlmacenamiento.PNG" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/imagenes/ModeloFisicoDeDatos.png" target="_blank">
-                        <img src="webroot/imagenes/ModeloFisicoDeDatos.png" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/modeloDatos.png" target="_blank">
+                        <img src="webroot/images/modeloDatos.png" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <a href="webroot/documentos/230129CatalogoDeRequisitos.pdf" target="_blank">
-                        <img src="webroot/imagenes/requisitos.png" class="img-fluid" style="height: 800px;">
+                    <a href="webroot/images/usoSesiones.png" target="_blank">
+                        <img src="webroot/images/usoSesiones.png" class="img-fluid" style="height: 800px;">
                     </a>
                 </div>
             </div>
