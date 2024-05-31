@@ -64,7 +64,7 @@ if ($entradaOK) {
     $oUsuarioActivo = UsuarioPDO::registrarUltimaConexion($oUsuarioActivo);
     // Configuramos sesiones para almacenar la información del usuario
     //Redireccionamos a el inicio privado
-    $_SESSION['user207AplicacionFinal'] = $oUsuarioActivo;
+    $_SESSION['usuarioMiAplicacion'] = $oUsuarioActivo;
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: indexAplicacionFinal.php');
     exit();

@@ -34,7 +34,7 @@
             </fieldset>
         </form>
     </div>
-    <div>
+    <div style="margin-top: 50px; margin-left: 100px; max-width: 29%; display: flex; justify-content: center;">
         <form name="formulario2" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <fieldset class="aemet">
                 <legend>
@@ -96,6 +96,8 @@
                     <option value="50" <?php echo ($provinciaEnCurso == '50') ? 'selected' : ''; ?>>Zaragoza</option>
                 </select>
                 <button class="volver" type="submit" name="prevision">Obtener Previsión</button>
+                <p style="margin-top: 20px;display: block; width: 50px"><span style="font-weight: bold;">URL</span>: https://opendata.aemet.es/opendata/api/prediccion/
+                    provincia/hoy/{$provincia}/?api_key="</p>
                 <hr>
                 <?php
                 // Muestra con formato los datos
@@ -119,7 +121,7 @@
             </fieldset>
         </form>
     </div>
-    <div>
+    <div style="margin-top: 50px; margin-right: 50px; max-width: 29%; display: flex; justify-content: center;">
         <form name="formulario1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <fieldset class=" nasa">
                 <legend>
@@ -134,6 +136,10 @@
                 <p><span style="font-weight: bold;">Fecha de Creación:</span><?php echo isset($aVistaRest['departamento']['descDep']) ? $aVistaRest['departamento']['descDep'] : ''; ?></p>
                 <p><span style="font-weight: bold;">Volumen de Negocio:</span><?php echo isset($aVistaRest['departamento']['volumen']) ? $aVistaRest['departamento']['volumen'] : ''; ?></p>
                 <p><span style="font-weight: bold;">Fecha de Baja:</span><?php echo isset($aVistaRest['departamento']['fechaBaja']) ? $aVistaRest['departamento']['fechaBaja'] : ''?></p>
+                <hr>
+                <p style="margin-top: 20px;display: block; width: 50px"><span style="font-weight: bold;">URL</span>: https://daw207.ieslossauces.es/207DWESAplicacionFinalBorja
+                    /api/buscarDepartamentoPorCodigo.php/
+                    ?codDepartamento=$codDepartamentoEnCurso</p>
             </fieldset>
         </form>
     </div>
