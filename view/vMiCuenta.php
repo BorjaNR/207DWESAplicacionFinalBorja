@@ -42,5 +42,7 @@
     </div>
     <input class="btn btn-primary" name="enviar" type="submit" value="Confirmar">
     <input class="btn btn-danger" name="cancelar" type="submit" value="Cancelar">
+    <input class="btn btn-danger" name="eliminar" type="submit" value="Eliminar">
+    <input class="btn btn-primary" name="cambiarPassword" type="submit" value="Cambiar Contraseña">
 </form>
 

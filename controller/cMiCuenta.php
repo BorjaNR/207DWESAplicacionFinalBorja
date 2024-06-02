@@ -12,6 +12,19 @@ if (isset($_REQUEST['cancelar'])) {
     exit();
 }
 
+// Redirige a borrarCuenta
+if (isset($_REQUEST['eliminar'])) {
+    $_SESSION['paginaEnCurso'] = 'borrarCuenta';
+    header('Location: indexAplicacionFinal.php');
+    exit();
+}
+
+// Redirige a borrarCuenta
+if (isset($_REQUEST['cambiarPassword'])) {
+    $_SESSION['paginaEnCurso'] = 'cambiarPassword';
+    header('Location: indexAplicacionFinal.php');
+    exit();
+}
 
 $avMiCuenta = [
     'codUsuario' => $_SESSION['usuarioMiAplicacion']->getcodUsuario(),

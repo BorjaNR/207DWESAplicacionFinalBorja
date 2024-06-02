@@ -75,7 +75,7 @@ if ($entradaOK) {
             
     // Configuramos sesiones para almacenar la información del usuario
     //Redireccionamos a el inicio privado
-    $_SESSION['user207AplicacionFinal'] = $oUsuarioRegistrado;
+    $_SESSION['usuarioMiAplicacion'] = $oUsuarioRegistrado;
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: indexAplicacionFinal.php');
     exit();

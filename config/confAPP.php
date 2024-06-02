@@ -32,7 +32,9 @@ $controller = [
     'añadirDepartamento' => 'controller/cAltaDepartamento.php',
     'bajaLogica' => 'controller/cBajaLogicaDepartamento.php',
     'rehabilitacion' => 'controller/cRehabilitacionDepartamento.php',
-    'mi_cuenta' => 'controller/cMiCuenta.php'
+    'mi_cuenta' => 'controller/cMiCuenta.php',
+    'borrarCuenta' => 'controller/cBorrarCuenta.php',
+    'cambiarPassword' => 'controller/cCambiarPassword.php'
 ];
 
 $view = [
@@ -49,5 +51,7 @@ $view = [
     'editarDepartamento' => 'view/vConsultarModificarDepartamento.php',
     'eliminarDepartamento' => 'view/vEliminarDepartamento.php',
     'añadirDepartamento' => 'view/vAltaDepartamento.php',
-    'mi_cuenta' => 'view/vMiCuenta.php'
+    'mi_cuenta' => 'view/vMiCuenta.php',
+    'borrarCuenta' => 'view/vBorrarCuenta.php',
+    'cambiarPassword' => 'view/vCambiarPassword.php'
 ];
