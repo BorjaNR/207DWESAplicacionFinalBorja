@@ -113,4 +113,27 @@ class UsuarioPDO implements UsuarioDB {
             return false;
         }
     }
+    
+    public static function borrarUsuario($codUsuario) {
+        //CONSULTA SQL - DELETE
+        $consultaEliminarUsuario = <<<CONSULTA
+            DELETE FROM T01_Usuario WHERE T01_CodUsuario = '{$codUsuario}';
+        CONSULTA;
+        return DBPDO::ejecutaConsulta($consultaEliminarUsuario);
+    }
+    
+     public static function cambiarPassword($oUsuario, $password) {
+        //Consulta SQL para modificar la password de un usuario
+        $consultaModificarPassword = <<<CONSULTA
+            UPDATE T01_Usuario SET T01_Password=SHA2("{$oUsuario->getCodUsuario()}{$password}", 256) WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
+        CONSULTA;
+        $hashPassword = hash("sha256", ($oUsuario->getCodUsuario() . $password));
+        $oUsuario->setPassword($hashPassword);
+
+        if (DBPDO::ejecutaConsulta($consultaModificarPassword)) {
+            return $oUsuario;
+        } else {
+            return false;
+        }
+    }
 }
